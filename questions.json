@@ -1,0 +1,140 @@
+[
+    {"id":"adj_excellent_at","prompt":"excellent __","answer":["at"],"group":"adjectives","note":"","tags":[]},
+    {"id":"adj_good_at","prompt":"good __","answer":["at"],"group":"adjectives","note":"","tags":[]},
+    {"id":"adj_bad_at","prompt":"bad __","answer":["at"],"group":"adjectives","note":"","tags":[]},
+  
+    {"id":"adj_experienced_in","prompt":"experienced __","answer":["in"],"group":"adjectives","note":"","tags":[]},
+    {"id":"adj_interested_in","prompt":"interested __","answer":["in"],"group":"adjectives","note":"","tags":[]},
+    {"id":"adj_successful_in","prompt":"successful __","answer":["in"],"group":"adjectives","note":"","tags":[]},
+  
+    {"id":"adj_keen_on","prompt":"keen __","answer":["on"],"group":"adjectives","note":"","tags":[]},
+    {"id":"adj_dependent_on","prompt":"dependent __","answer":["on"],"group":"adjectives","note":"","tags":[]},
+  
+    {"id":"adj_happy_for","prompt":"happy __ sb","answer":["for"],"group":"adjectives","note":"FOR = happy for someone","tags":["confuser:happy_for_with_about"]},
+    {"id":"adj_happy_with","prompt":"happy __ sth","answer":["with"],"group":"adjectives","note":"WITH = happy with something","tags":["confuser:happy_for_with_about"]},
+    {"id":"adj_happy_about","prompt":"happy __ sth","answer":["about"],"group":"adjectives","note":"ABOUT = happy about news/situation","tags":["confuser:happy_for_with_about"]},
+  
+    {"id":"adj_responsible_for","prompt":"responsible __","answer":["for"],"group":"adjectives","note":"","tags":[]},
+    {"id":"adj_famous_for","prompt":"famous __","answer":["for"],"group":"adjectives","note":"FOR = famous for something","tags":["confuser:known_as_famous_for"]},
+    {"id":"adj_grateful_for","prompt":"grateful __","answer":["for"],"group":"adjectives","note":"","tags":[]},
+  
+    {"id":"adj_delighted_with","prompt":"delighted __","answer":["with"],"group":"adjectives","note":"","tags":[]},
+    {"id":"adj_pleased_with","prompt":"pleased __","answer":["with"],"group":"adjectives","note":"","tags":[]},
+  
+    {"id":"adj_impressed_by","prompt":"impressed __","answer":["by"],"group":"adjectives","note":"BY = impressed by what caused it","tags":["confuser:impressed_by_with"]},
+    {"id":"adj_impressed_with","prompt":"impressed __","answer":["with"],"group":"adjectives","note":"WITH = impressed with the result/thing","tags":["confuser:impressed_by_with"]},
+  
+    {"id":"adj_familiar_to","prompt":"familiar __ sb (well known)","answer":["to"],"group":"adjectives","note":"TO = well known to","tags":["confuser:familiar_to_with"]},
+    {"id":"adj_familiar_with","prompt":"familiar __ sth (know well)","answer":["with"],"group":"adjectives","note":"WITH = know well","tags":["confuser:familiar_to_with"]},
+  
+    {"id":"adj_crazy_about","prompt":"crazy __","answer":["about"],"group":"adjectives","note":"","tags":[]},
+    {"id":"adj_curious_about","prompt":"curious __","answer":["about"],"group":"adjectives","note":"","tags":[]},
+    {"id":"adj_excited_about","prompt":"excited __","answer":["about"],"group":"adjectives","note":"","tags":[]},
+    {"id":"adj_enthusiastic_about","prompt":"enthusiastic __","answer":["about"],"group":"adjectives","note":"","tags":[]},
+  
+    {"id":"adj_sorry_for","prompt":"sorry __ sb","answer":["for"],"group":"confusers","note":"FOR = feel sorry for someone","tags":["confuser:sorry_for_about"]},
+    {"id":"adj_sorry_about","prompt":"sorry __ sth","answer":["about"],"group":"confusers","note":"ABOUT = sorry about something","tags":["confuser:sorry_for_about"]},
+  
+    {"id":"adj_angry_with","prompt":"angry __ sb","answer":["with"],"group":"confusers","note":"WITH = angry with a person","tags":["confuser:angry_with_about"]},
+    {"id":"adj_angry_about","prompt":"angry __ sth","answer":["about"],"group":"confusers","note":"ABOUT = angry about a thing/situation","tags":["confuser:angry_with_about"]},
+  
+    {"id":"adj_annoyed_with","prompt":"annoyed __ sb","answer":["with"],"group":"confusers","note":"WITH = annoyed with a person","tags":["confuser:annoyed_with_about"]},
+    {"id":"adj_annoyed_about","prompt":"annoyed __ sth","answer":["about"],"group":"confusers","note":"ABOUT = annoyed about a thing/situation","tags":["confuser:annoyed_with_about"]},
+  
+    {"id":"adj_proud_of","prompt":"proud __","answer":["of"],"group":"adjectives","note":"","tags":[]},
+    {"id":"adj_fond_of","prompt":"fond __","answer":["of"],"group":"adjectives","note":"","tags":[]},
+    {"id":"adj_aware_of","prompt":"(un)aware __","answer":["of"],"group":"adjectives","note":"","tags":[]},
+    {"id":"adj_typical_of","prompt":"typical __","answer":["of"],"group":"adjectives","note":"","tags":[]},
+  
+    {"id":"adj_accustomed_to","prompt":"accustomed __","answer":["to"],"group":"adjectives","note":"","tags":[]},
+    {"id":"adj_addicted_to","prompt":"addicted __","answer":["to"],"group":"adjectives","note":"","tags":[]},
+    {"id":"adj_cruel_to","prompt":"cruel __","answer":["to"],"group":"adjectives","note":"","tags":[]},
+    {"id":"adj_rude_to","prompt":"rude __","answer":["to"],"group":"adjectives","note":"","tags":[]},
+  
+    {"id":"adj_respected_by","prompt":"respected __","answer":["by"],"group":"adjectives","note":"","tags":[]},
+    {"id":"adj_amused_by","prompt":"amused __","answer":["by"],"group":"adjectives","note":"","tags":[]},
+    {"id":"adj_astonished_by","prompt":"astonished __","answer":["by"],"group":"adjectives","note":"","tags":[]},
+  
+    {"id":"adj_shocked_at","prompt":"shocked __ (a fact/news)","answer":["at"],"group":"confusers","note":"AT = shocked at a fact/news","tags":["confuser:shocked_at_by"]},
+    {"id":"adj_shocked_by","prompt":"shocked __ (what caused it)","answer":["by"],"group":"confusers","note":"BY = shocked by what caused it","tags":["confuser:shocked_at_by"]},
+  
+    {"id":"noun_answer_to","prompt":"an answer __","answer":["to"],"group":"nouns","note":"","tags":[]},
+    {"id":"noun_reply_to","prompt":"a reply __","answer":["to"],"group":"nouns","note":"","tags":[]},
+    {"id":"noun_pride_in","prompt":"(take) pride __","answer":["in"],"group":"nouns","note":"","tags":[]},
+    {"id":"noun_report_on","prompt":"a report __ sth","answer":["on"],"group":"nouns","note":"","tags":[]},
+  
+    {"id":"noun_sympathy_for","prompt":"(feel) sympathy __","answer":["for"],"group":"nouns","note":"","tags":[]},
+    {"id":"noun_talent_for","prompt":"a talent __","answer":["for"],"group":"nouns","note":"","tags":[]},
+    {"id":"noun_opportunity_to","prompt":"an opportunity __ (do sth)","answer":["to"],"group":"nouns","note":"main pattern: an opportunity to do sth","tags":[]},
+    {"id":"noun_opportunity_for","prompt":"an opportunity __ sth","answer":["for"],"group":"nouns","note":"also correct: an opportunity for sth","tags":[]},
+  
+    {"id":"noun_knowledge_of","prompt":"knowledge __","answer":["of"],"group":"nouns","note":"","tags":[]},
+    {"id":"noun_rise_in","prompt":"a rise __","answer":["in"],"group":"nouns","note":"","tags":[]},
+  
+    {"id":"noun_taste_of","prompt":"a taste __ (flavour / brief experience)","answer":["of"],"group":"confusers","note":"OF = flavour / brief experience","tags":["confuser:taste_of_for"]},
+    {"id":"noun_taste_for","prompt":"a taste __ (liking / preference)","answer":["for"],"group":"confusers","note":"FOR = liking / preference","tags":["confuser:taste_of_for"]},
+  
+    {"id":"verb_associate_with","prompt":"associate __","answer":["with"],"group":"verbs","note":"","tags":[]},
+    {"id":"verb_cooperate_with","prompt":"cooperate __ sb","answer":["with"],"group":"verbs","note":"","tags":[]},
+    {"id":"verb_deal_with","prompt":"deal __","answer":["with"],"group":"verbs","note":"","tags":[]},
+    {"id":"verb_provide_with","prompt":"provide sb __ sth","answer":["with"],"group":"verbs","note":"","tags":[]},
+    {"id":"verb_supply_with","prompt":"supply sb __ sth","answer":["with"],"group":"verbs","note":"","tags":[]},
+    {"id":"verb_fill_with","prompt":"fill sth __ sth","answer":["with"],"group":"verbs","note":"","tags":[]},
+  
+    {"id":"verb_provide_to","prompt":"provide sth __ sb","answer":["to"],"group":"verbs","note":"","tags":[]},
+    {"id":"verb_supply_to","prompt":"supply sth __ sb","answer":["to"],"group":"verbs","note":"","tags":[]},
+  
+    {"id":"verb_concentrate_on","prompt":"concentrate __ sth","answer":["on"],"group":"verbs","note":"","tags":[]},
+    {"id":"verb_congratulate_on","prompt":"congratulate sb __ sth","answer":["on"],"group":"verbs","note":"","tags":[]},
+  
+    {"id":"verb_include_in","prompt":"include (sth) __","answer":["in"],"group":"verbs","note":"","tags":[]},
+    {"id":"verb_involve_in","prompt":"involve sb __ sth","answer":["in"],"group":"verbs","note":"","tags":[]},
+  
+    {"id":"verb_succeed_in","prompt":"succeed __ (doing sth)","answer":["in"],"group":"verbs","note":"IN = succeed in doing sth","tags":[]},
+    {"id":"verb_succeed_at","prompt":"succeed __ (a task/skill)","answer":["at"],"group":"verbs","note":"AT = succeed at a task/skill","tags":[]},
+  
+    {"id":"verb_know_about","prompt":"know __ sth","answer":["about"],"group":"verbs","note":"","tags":[]},
+    {"id":"verb_praise_for","prompt":"praise sb __ sth","answer":["for"],"group":"verbs","note":"","tags":[]},
+  
+    {"id":"conf_fight_with","prompt":"fight __ sb","answer":["with"],"group":"confusers","note":"WITH = fight with someone","tags":["confuser:fight_with_about"]},
+    {"id":"conf_fight_about","prompt":"fight __ sth","answer":["about"],"group":"confusers","note":"ABOUT = fight about something","tags":["confuser:fight_with_about"]},
+  
+    {"id":"conf_apply_to","prompt":"apply __ (a person/institution)","answer":["to"],"group":"confusers","note":"TO = apply to a person/institution","tags":["confuser:apply_to_for"]},
+    {"id":"conf_apply_for","prompt":"apply __ (a job/visa/thing)","answer":["for"],"group":"confusers","note":"FOR = apply for a job/visa/thing","tags":["confuser:apply_to_for"]},
+  
+    {"id":"conf_known_as","prompt":"known __","answer":["as"],"group":"confusers","note":"AS = known as a name/role","tags":["confuser:known_as_famous_for"]},
+    {"id":"conf_famous_for","prompt":"famous __","answer":["for"],"group":"confusers","note":"FOR = famous for something","tags":["confuser:known_as_famous_for"]},
+  
+    {"id":"conf_protection_from","prompt":"protection __ (harm/cold/etc.)","answer":["from"],"group":"confusers","note":"FROM = protection from something","tags":["confuser:protection_from_against"]},
+    {"id":"conf_protection_against","prompt":"protection __ (attack/fraud/etc.)","answer":["against"],"group":"confusers","note":"AGAINST = protection against something","tags":["confuser:protection_from_against"]},
+  
+    {"id":"into_look_into","prompt":"look __ (a problem)","answer":["into"],"group":"into_set","note":"","tags":[]},
+    {"id":"into_run_into","prompt":"run __ (an old friend / a problem)","answer":["into"],"group":"into_set","note":"","tags":[]},
+    {"id":"into_get_into","prompt":"get __ trouble","answer":["into"],"group":"into_set","note":"","tags":[]},
+    {"id":"into_break_into","prompt":"break __ (a house)","answer":["into"],"group":"into_set","note":"","tags":[]},
+    {"id":"into_talk_into","prompt":"talk sb __ doing sth","answer":["into"],"group":"into_set","note":"","tags":[]},
+    {"id":"into_turn_into","prompt":"turn __ (ice / something else)","answer":["into"],"group":"into_set","note":"","tags":[]},
+    {"id":"into_translate_into","prompt":"translate __ (English / another language)","answer":["into"],"group":"into_set","note":"","tags":[]},
+    {"id":"into_be_into","prompt":"be __ (music / a hobby)","answer":["into"],"group":"into_set","note":"","tags":[]},
+  
+    {"id":"out_of_control","prompt":"out __ control","answer":["of"],"group":"out_of_set","note":"forms “out of …”","tags":[]},
+    {"id":"out_of_money","prompt":"out __ money","answer":["of"],"group":"out_of_set","note":"forms “out of …”","tags":[]},
+    {"id":"out_of_time","prompt":"out __ time","answer":["of"],"group":"out_of_set","note":"forms “out of …”","tags":[]},
+    {"id":"out_of_date","prompt":"out __ date","answer":["of"],"group":"out_of_set","note":"forms “out of …”","tags":[]},
+    {"id":"out_of_order","prompt":"out __ order","answer":["of"],"group":"out_of_set","note":"forms “out of …”","tags":[]},
+    {"id":"out_of_breath","prompt":"out __ breath","answer":["of"],"group":"out_of_set","note":"forms “out of …”","tags":[]},
+    {"id":"out_of_luck","prompt":"out __ luck","answer":["of"],"group":"out_of_set","note":"forms “out of …”","tags":[]},
+    {"id":"out_of_practice","prompt":"out __ practice","answer":["of"],"group":"out_of_set","note":"forms “out of …”","tags":[]},
+    {"id":"out_of_get_out_of","prompt":"get __ (doing sth)","answer":["out of"],"group":"out_of_set","note":"","tags":[]},
+    {"id":"out_of_talk_out_of","prompt":"talk sb __ doing sth","answer":["out of"],"group":"out_of_set","note":"","tags":[]},
+  
+    {"id":"as_known_as","prompt":"known __ (a name/role)","answer":["as"],"group":"as_set","note":"","tags":[]},
+    {"id":"as_work_as","prompt":"work __ (a teacher)","answer":["as"],"group":"as_set","note":"","tags":[]},
+    {"id":"as_serve_as","prompt":"serve __ (an example)","answer":["as"],"group":"as_set","note":"","tags":[]},
+    {"id":"as_regard_as","prompt":"regard sb __ (a friend)","answer":["as"],"group":"as_set","note":"","tags":[]},
+    {"id":"as_think_of_as","prompt":"think of sb __ (a mentor)","answer":["as"],"group":"as_set","note":"","tags":[]},
+    {"id":"as_refer_to_as","prompt":"refer to sb __ (the lead)","answer":["as"],"group":"as_set","note":"","tags":[]},
+    {"id":"as_treat_as","prompt":"treat sb __ (an equal)","answer":["as"],"group":"as_set","note":"","tags":[]},
+    {"id":"as_qualify_as","prompt":"qualify __ (a nurse)","answer":["as"],"group":"as_set","note":"","tags":[]},
+    {"id":"as_pass_as","prompt":"pass __ (a local)","answer":["as"],"group":"as_set","note":"","tags":[]}
+  ]

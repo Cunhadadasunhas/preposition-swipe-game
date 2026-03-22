@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Preposition Swipe Trainer</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a2332;
+      --text: #f2f5f9;
+      --muted: #8b9bb4;
+      --accent: #3d9eff;
+      --ok: #2ecc71;
+      --bad: #e74c3c;
+      --border: #2a3545;
+      --safe-top: env(safe-area-inset-top, 0px);
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+      touch-action: none;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    #app {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      max-width: 560px;
+      margin: 0 auto;
+      padding: calc(8px + var(--safe-top)) 12px calc(12px + var(--safe-bottom));
+    }
+    .topbar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .topbar > div {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .topbar .full { grid-column: 1 / -1; }
+    .muted { color: var(--muted); font-weight: 500; }
+    .desktop-badge {
+      display: none;
+      font-size: 11px;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      padding: 2px 6px;
+      margin-left: 8px;
+    }
+    .desktop .desktop-badge { display: inline-block; }
+    .swipe-debug {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 4px;
+      min-height: 1.2em;
+    }
+    .card-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      min-height: 0;
+    }
+    .compass-frame {
+      display: grid;
+      grid-template-areas:
+        ". up ."
+        "left centre right"
+        ". down .";
+      grid-template-columns: minmax(0, auto) minmax(0, 1fr) minmax(0, auto);
+      grid-template-rows: auto 1fr auto;
+      gap: 6px 8px;
+      align-items: center;
+      justify-items: center;
+      min-height: 0;
+      width: 100%;
+    }
+    .compass-edge {
+      font-size: clamp(12px, 3.4vw, 15px);
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+      color: #c5d0e0;
+      max-width: 104px;
+      padding: 6px 4px;
+      border-radius: 8px;
+      transition: color 0.15s, background 0.15s, box-shadow 0.15s;
+    }
+    .compass-edge--up { grid-area: up; align-self: end; }
+    .compass-edge--down { grid-area: down; align-self: start; }
+    .compass-edge--left { grid-area: left; justify-self: end; max-width: 100px; }
+    .compass-edge--right { grid-area: right; justify-self: start; max-width: 100px; }
+    .compass-centre {
+      grid-area: centre;
+      min-width: 0;
+      width: 100%;
+      align-self: stretch;
+    }
+    .compass-edge--lit {
+      color: var(--text);
+      background: rgba(61, 158, 255, 0.18);
+      box-shadow: 0 0 0 2px var(--accent);
+      animation: compassPulse 0.45s ease;
+    }
+    @keyframes compassPulse {
+      0% { box-shadow: 0 0 0 2px var(--accent); }
+      100% { box-shadow: 0 0 0 0 transparent; }
+    }
+    .compass-txt { display: block; word-break: break-word; }
+    .compass-edge.phase2 .compass-txt {
+      font-size: clamp(13px, 3.6vw, 17px);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+    .card {
+      background: var(--surface);
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 20px;
+      text-align: center;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .prompt {
+      font-size: clamp(1.35rem, 5vw, 1.85rem);
+      font-weight: 700;
+      line-height: 1.35;
+      word-break: break-word;
+    }
+    .prompt-fill { font-weight: 800; padding: 0 2px; border-radius: 4px; }
+    .prompt-fill--ok { color: var(--ok); background: rgba(46, 204, 113, 0.15); }
+    .prompt-fill--bad { color: var(--bad); background: rgba(231, 76, 60, 0.12); }
+    .group-label {
+      margin-top: 12px;
+      font-size: 14px;
+      color: var(--muted);
+      min-height: 1.3em;
+    }
+    .class-hint { display: none; }
+    .feedback {
+      margin-top: 14px;
+      min-height: 2.5em;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .feedback.ok { color: var(--ok); }
+    .feedback.bad { color: var(--bad); }
+    .flash { animation: flash 0.35s ease; }
+    @keyframes flash {
+      0% { background: rgba(255,255,255,0.08); }
+      100% { background: transparent; }
+    }
+    .flash.ok { animation: flashOk 0.35s ease; }
+    .flash.bad { animation: flashBad 0.35s ease; }
+    @keyframes flashOk { 0% { box-shadow: 0 0 0 3px var(--ok); } 100% { box-shadow: none; } }
+    @keyframes flashBad { 0% { box-shadow: 0 0 0 3px var(--bad); } 100% { box-shadow: none; } }
+    .bottom {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    button {
+      flex: 1 1 45%;
+      min-height: 48px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 12px;
+      border: 2px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+    }
+    button:active { transform: scale(0.98); }
+    button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    button:disabled { opacity: 0.45; cursor: not-allowed; }
+    .questions-error {
+      background: rgba(231, 76, 60, 0.12);
+      border: 1px solid var(--bad);
+      color: #f5a8a0;
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 1.45;
+      font-weight: 600;
+    }
+    .edit-hint { font-size: 12px; color: var(--muted); margin-top: 10px; line-height: 1.4; }
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 100;
+    }
+    .overlay.open { display: flex; }
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 480px;
+      max-height: 90vh;
+      overflow: auto;
+      padding: 16px;
+    }
+    .panel h2 { margin: 0 0 12px; font-size: 18px; }
+    .panel label { display: block; margin: 10px 0 4px; font-size: 13px; color: var(--muted); }
+    .panel input, .panel select, .panel textarea {
+      width: 100%;
+      font-size: 14px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+    }
+    .panel textarea { min-height: 220px; font-family: ui-monospace, monospace; }
+    .row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+    .row button { flex: 1 1 auto; min-width: 100px; }
+    .hint-map {
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--muted);
+      margin-top: 8px;
+      white-space: pre-wrap;
+    }
+    .hint-overlay {
+      position: fixed;
+      bottom: 72px;
+      left: 8px;
+      right: 8px;
+      max-width: 544px;
+      margin: 0 auto;
+      background: rgba(26,35,50,0.95);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 11px;
+      color: var(--muted);
+      z-index: 50;
+      display: none;
+      max-height: 40vh;
+      overflow: auto;
+    }
+    .hint-overlay.show { display: block; }
+    .boss-banner {
+      text-align: center;
+      font-weight: 700;
+      color: var(--bad);
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+    #comboRow { display: none; }
+    #app.show-combo #comboRow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    .prep-bar-wrap {
+      display: none;
+      flex-shrink: 0;
+      margin-top: 10px;
+    }
+    .desktop .prep-bar-wrap { display: block; }
+    .last-input-debug {
+      font-size: 10px;
+      color: var(--muted);
+      margin-bottom: 6px;
+      min-height: 1.2em;
+      font-family: ui-monospace, monospace;
+    }
+    .prep-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+    .prep-bar button.prep-btn {
+      flex: 0 1 auto;
+      min-width: 72px;
+      min-height: 52px;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 8px 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div id="questionsError" class="questions-error" role="alert" style="display:none"></div>
+    <div class="topbar">
+      <div class="full">
+        <span id="modeLine">Mode: Practice</span>
+        <span><span class="muted">Desktop</span><span class="desktop-badge">desktop mode</span></span>
+      </div>
+      <div><span class="muted">Timer</span> <span id="timer">—</span></div>
+      <div><span class="muted">Score</span> <span id="score">0</span></div>
+      <div id="comboRow"><span class="muted">Combo</span> <span id="combo">0</span></div>
+      <div class="full"><span class="muted">Accuracy</span> <span id="accuracy">—</span></div>
+    </div>
+    <div class="swipe-debug" id="swipeDebug"></div>
+    <div class="boss-banner" id="bossBanner" style="display:none"></div>
+    <div class="card-wrap" id="cardArea">
+      <div class="compass-frame" id="compassFrame">
+        <div class="compass-edge compass-edge--up" data-dir="up" aria-hidden="true"><span class="compass-txt" id="cLabelUp"></span></div>
+        <div class="compass-edge compass-edge--left" data-dir="left" aria-hidden="true"><span class="compass-txt" id="cLabelLeft"></span></div>
+        <div class="compass-centre">
+          <div class="card" id="mainCard">
+            <div class="prompt" id="promptText">Press Start</div>
+            <div class="group-label" id="groupText"></div>
+            <div class="class-hint" id="classHint"></div>
+            <div class="feedback" id="feedback"></div>
+          </div>
+        </div>
+        <div class="compass-edge compass-edge--right" data-dir="right" aria-hidden="true"><span class="compass-txt" id="cLabelRight"></span></div>
+        <div class="compass-edge compass-edge--down" data-dir="down" aria-hidden="true"><span class="compass-txt" id="cLabelDown"></span></div>
+      </div>
+    </div>
+    <div class="hint-overlay" id="hintOverlay"></div>
+    <div class="prep-bar-wrap" id="prepBarWrap" aria-hidden="true">
+      <div class="last-input-debug" id="lastInputDebug"></div>
+      <div class="prep-bar" id="prepBar" role="group" aria-label="Answer with a preposition"></div>
+    </div>
+    <div class="bottom">
+      <button class="primary" id="btnStart" type="button" disabled>Start</button>
+      <button id="btnMode" type="button">Mode: Practice</button>
+      <button id="btnSettings" type="button">Settings</button>
+      <button id="btnEdit" type="button">Edit Questions</button>
+    </div>
+  </div>
+
+  <div class="overlay" id="settingsOverlay">
+    <div class="panel">
+      <h2>Settings</h2>
+      <label>Sprint length (seconds)</label>
+      <select id="setSprint">
+        <option value="30">30</option>
+        <option value="60" selected>60</option>
+        <option value="90">90</option>
+      </select>
+      <label>Mistakes mode: accuracy threshold (%)</label>
+      <input type="number" id="setAcc" min="0" max="100" value="70" />
+      <label>
+        <input type="checkbox" id="setHint" /> Show mapping hint (Practice)
+      </label>
+      <label>Swipe2 timeout</label>
+      <select id="setSwipe2">
+        <option value="off">Off</option>
+        <option value="5">5s</option>
+        <option value="8" selected>8s</option>
+        <option value="12">12s</option>
+      </select>
+      <label>
+        <input type="checkbox" id="setUnlimitedNonSprint" checked /> Unlimited in non-sprint modes
+      </label>
+      <div class="row">
+        <button type="button" id="btnResetStats">Reset stats</button>
+        <button type="button" id="btnResetAppData">Reset app data</button>
+        <button type="button" id="btnCloseSettings">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay" id="editOverlay">
+    <div class="panel">
+      <h2>Questions (questions.json)</h2>
+      <p class="edit-hint">Read-only. Edit the file on disk, then use Reload from file.</p>
+      <textarea id="editArea" spellcheck="false" readonly></textarea>
+      <div class="row">
+        <button type="button" class="primary" id="btnReloadQuestions">Reload from file</button>
+        <button type="button" id="btnCancelEdit">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+(function () {
+  'use strict';
+
+  const SWIPE_MIN = 40;
+  const DIR_SYMBOL = { up: '↑', down: '↓', left: '←', right: '→' };
+
+  const COMPASS_SWIPE1 = {
+    up: 'direction',
+    down: 'location',
+    right: 'meaning',
+    left: 'interaction'
+  };
+
+  const PREP_BY_CLASS = {
+    down: { down: 'in', right: 'on', left: 'at', up: 'between' },
+    up: { up: 'to', down: 'from', right: 'into', left: 'out of' },
+    right: { right: 'about', up: 'for', down: 'of', left: 'as' },
+    left: { left: 'with', up: 'by', right: 'against', down: 'to' }
+  };
+
+  const MODES = ['practice', 'sprint', 'mistakes', 'confusers'];
+  const MODE_LABELS = {
+    practice: 'Practice',
+    sprint: 'Sprint',
+    mistakes: 'Mistakes',
+    confusers: 'Confusers'
+  };
+
+  const STORAGE_STATS = 'pst_stats_v1';
+  const STORAGE_SETTINGS = 'pst_settings_v1';
+  /** Legacy: questions were stored here; cleared by Reset app data. */
+  const STORAGE_LEGACY_BANK = 'pst_bank_v1';
+  const QUESTIONS_URL = new URL('questions.json', document.baseURI || window.location.href).href;
+
+  const DEFAULT_SETTINGS = {
+    sprintSec: 60,
+    mistakeAccThreshold: 70,
+    showHintPractice: false,
+    swipe2Timeout: '8',
+    unlimitedNonSprintSwipe2: true
+  };
+
+  const POST_ANSWER_MS = 1600;
+
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function promptHtmlWithFilledBlank(q, prepShown, isCorrect) {
+    var cls = isCorrect ? 'prompt-fill prompt-fill--ok' : 'prompt-fill prompt-fill--bad';
+    var span = '<span class="' + cls + '">' + escapeHtml(prepShown) + '</span>';
+    return escapeHtml(q.prompt).replace(/__+/g, span);
+  }
+
+  function getSwipe2TimeoutMs() {
+    var sets = loadSettings();
+    var t = sets.swipe2Timeout != null ? String(sets.swipe2Timeout) : 'off';
+    if (t === 'off') return null;
+    var sec = parseInt(t, 10);
+    if (sec !== 5 && sec !== 8 && sec !== 12) return null;
+    var unlimited = sets.unlimitedNonSprintSwipe2 !== false;
+    if (unlimited && state.mode !== 'sprint') return null;
+    return sec * 1000;
+  }
+
+  function loadSettings() {
+    try {
+      const s = JSON.parse(localStorage.getItem(STORAGE_SETTINGS) || '{}');
+      return { ...DEFAULT_SETTINGS, ...s };
+    } catch (e) {
+      return { ...DEFAULT_SETTINGS };
+    }
+  }
+  function saveSettings(s) {
+    localStorage.setItem(STORAGE_SETTINGS, JSON.stringify(s));
+  }
+
+  function normalizePrep(s) {
+    return String(s || '').trim().toLowerCase().replace(/\s+/g, ' ');
+  }
+
+  function prepFromSwipes(classDir, secondDir) {
+    const m = PREP_BY_CLASS[classDir];
+    if (!m) return null;
+    return m[secondDir] || null;
+  }
+
+  function swipesMatchAnswer(classDir, secondDir, answerList) {
+    const got = normalizePrep(prepFromSwipes(classDir, secondDir));
+    if (!got) return false;
+    const answers = answerList.map(normalizePrep);
+    if (answers.includes(got)) return true;
+    if (got === 'to' && answers.includes('to')) return true;
+    return false;
+  }
+
+  function angleToDir(dx, dy) {
+    const dist = Math.hypot(dx, dy);
+    if (dist < SWIPE_MIN) return null;
+    const ang = Math.atan2(dy, dx) * 180 / Math.PI;
+    if (ang >= -45 && ang < 45) return 'right';
+    if (ang >= 45 && ang < 135) return 'down';
+    if (ang >= -135 && ang < -45) return 'up';
+    return 'left';
+  }
+
+  function createPointerSwipe(onSwipe) {
+    let startX, startY, tracking = false;
+
+    function end(x, y) {
+      if (!tracking) return;
+      tracking = false;
+      const dir = angleToDir(x - startX, y - startY);
+      if (dir) onSwipe(dir);
+    }
+
+    return {
+      start(ev) {
+        const t = ev.touches && ev.touches[0] ? ev.touches[0] : (ev.changedTouches ? ev.changedTouches[0] : ev);
+        startX = t.clientX;
+        startY = t.clientY;
+        tracking = true;
+      },
+      move(ev) {
+        if (!tracking) return;
+        ev.preventDefault();
+      },
+      end(ev) {
+        const t = ev.changedTouches ? ev.changedTouches[0] : ev;
+        end(t.clientX, t.clientY);
+      },
+      cancel() { tracking = false; }
+    };
+  }
+
+  function createMouseDragSwipe(onSwipe) {
+    let sx, sy, down = false;
+    return {
+      down(ev) {
+        down = true;
+        sx = ev.clientX;
+        sy = ev.clientY;
+      },
+      move(ev) {
+        if (down) ev.preventDefault();
+      },
+      up(ev) {
+        if (!down) return;
+        down = false;
+        const dir = angleToDir(ev.clientX - sx, ev.clientY - sy);
+        if (dir) onSwipe(dir);
+      },
+      leave() { down = false; }
+    };
+  }
+
+  const KEY_TO_DIR = {
+    ArrowUp: 'up', ArrowDown: 'down', ArrowLeft: 'left', ArrowRight: 'right',
+    w: 'up', W: 'up', s: 'down', S: 'down', a: 'left', A: 'left', d: 'right', D: 'right'
+  };
+
+  const DESKTOP_PREP_BUTTONS = [
+    'in', 'on', 'at', 'between',
+    'to', 'from', 'into', 'out of',
+    'about', 'for', 'of', 'as',
+    'with', 'by', 'against'
+  ];
+
+  function normalizeQuestion(q) {
+    const tags = q.tags;
+    const tagArr = Array.isArray(tags) ? tags : (tags ? [tags] : []);
+    return Object.assign({}, q, { tags: tagArr });
+  }
+
+  function validateBank(arr) {
+    if (!Array.isArray(arr)) throw new Error('Root must be an array');
+    if (!arr.length) throw new Error('Question list is empty.');
+    arr.forEach((q, i) => {
+      if (!q || typeof q !== 'object') throw new Error('Invalid item at ' + i);
+      if (!q.id) throw new Error('Missing id at ' + i);
+      if (!q.prompt) throw new Error('Missing prompt at ' + i);
+      if (!Array.isArray(q.answer) || !q.answer.length) throw new Error('Invalid answer at ' + i);
+    });
+    return true;
+  }
+
+  function buildConfuserSetsFromBank(bank) {
+    const groups = {};
+    bank.forEach(function (q) {
+      const tags = q.tags || [];
+      tags.forEach(function (t) {
+        if (typeof t !== 'string' || t.indexOf('confuser:') !== 0) return;
+        if (!groups[t]) groups[t] = [];
+        if (groups[t].indexOf(q.id) === -1) groups[t].push(q.id);
+      });
+    });
+    return Object.keys(groups).sort().map(function (tag) {
+      return { note: '', items: groups[tag] };
+    });
+  }
+
+  function setQuestionsLoadError(message) {
+    state.questionsLoadError = message || null;
+    const el = document.getElementById('questionsError');
+    const btn = document.getElementById('btnStart');
+    if (!el || !btn) return;
+    if (message) {
+      el.textContent = message;
+      el.style.display = 'block';
+      btn.disabled = true;
+    } else {
+      el.textContent = '';
+      el.style.display = 'none';
+      btn.disabled = false;
+    }
+  }
+
+  function stopSessionToIdle() {
+    clearSwipe2Timeout();
+    stopSprintTimer();
+    state.running = false;
+    state.paused = false;
+    state.current = null;
+    state.boss = false;
+    state.bossQueue = [];
+    state.bossProgress = {};
+    resetSwipePhase();
+    document.getElementById('btnStart').textContent = 'Start';
+    document.getElementById('feedback').textContent = '';
+    document.getElementById('feedback').className = 'feedback';
+    document.getElementById('groupText').textContent = '';
+    const pt = document.getElementById('promptText');
+    if (state.questionsLoadError) {
+      pt.textContent = 'Cannot load questions.';
+    } else if (!state.bank.length) {
+      pt.textContent = 'No questions loaded.';
+    } else {
+      pt.textContent = 'Press Start';
+    }
+    applyHintOverlay();
+    updateHUD();
+  }
+
+  async function loadQuestionsFromFile() {
+    try {
+      const res = await fetch(QUESTIONS_URL, { cache: 'no-store' });
+      if (!res.ok) {
+        throw new Error('Could not load questions.json (' + res.status + ' ' + res.statusText + ').');
+      }
+      const text = await res.text();
+      const arr = JSON.parse(text);
+      validateBank(arr);
+      state.bank = arr.map(normalizeQuestion);
+      state.confuserSets = buildConfuserSetsFromBank(state.bank);
+      setQuestionsLoadError(null);
+      if (!state.running) {
+        document.getElementById('promptText').textContent =
+          state.bank.length ? 'Press Start' : 'No questions loaded.';
+      }
+    } catch (e) {
+      state.bank = [];
+      state.confuserSets = [];
+      const msg = e && e.message ? e.message : String(e);
+      setQuestionsLoadError('Failed to load questions: ' + msg);
+      document.getElementById('promptText').textContent = 'Cannot load questions.';
+    }
+  }
+
+  function clearAppLocalStorage() {
+    localStorage.removeItem(STORAGE_STATS);
+    localStorage.removeItem(STORAGE_SETTINGS);
+    localStorage.removeItem(STORAGE_LEGACY_BANK);
+  }
+
+  function loadStats() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_STATS) || '{}') || {};
+    } catch (e) {
+      return {};
+    }
+  }
+  function saveStats(stats) {
+    localStorage.setItem(STORAGE_STATS, JSON.stringify(stats));
+  }
+
+  function getOrInitStat(id) {
+    const stats = loadStats();
+    if (!stats[id]) {
+      stats[id] = { attempts: 0, correct: 0, wrong: 0, lastSeen: 0, weight: 1 };
+    }
+    return stats;
+  }
+
+  function updateStat(id, correct) {
+    const stats = getOrInitStat(id);
+    const s = stats[id];
+    s.attempts += 1;
+    s.lastSeen = Date.now();
+    if (correct) {
+      s.correct += 1;
+      s.weight = Math.max(1, s.weight - 0.2);
+    } else {
+      s.wrong += 1;
+      s.weight += 2;
+    }
+    saveStats(stats);
+    return s;
+  }
+
+  function accuracyForCard(id) {
+    const stats = loadStats();
+    const s = stats[id];
+    if (!s || !s.attempts) return 100;
+    return Math.round(100 * s.correct / s.attempts);
+  }
+
+  const state = {
+    mode: 'practice',
+    running: false,
+    paused: false,
+    sprintRemaining: 0,
+    sprintTimerId: null,
+    score: 0,
+    combo: 0,
+    sessionAttempts: 0,
+    sessionCorrect: 0,
+    current: null,
+    bank: [],
+    quickRetry: [],
+    questionsUntilRetry: 0,
+    boss: false,
+    bossQueue: [],
+    bossProgress: {},
+    sprintMistakes: new Set(),
+    confuserSets: [],
+    confuserIndex: 0,
+    confuserPos: 0,
+    awaitingSecondSwipe: false,
+    firstSwipeClass: null,
+    feedbackTimer: null,
+    lastFeedback: null,
+    desktop: false,
+    swipe2Timer: null,
+    compassFlashTimer: null,
+    questionsLoadError: null
+  };
+
+  function isDesktopMode() {
+    return !(navigator.maxTouchPoints > 0 || 'ontouchstart' in window);
+  }
+
+  function setDesktopUI() {
+    state.desktop = isDesktopMode();
+    document.documentElement.classList.toggle('desktop', state.desktop);
+    var el = document.getElementById('swipeDebug');
+    if (!state.desktop) el.textContent = '';
+    var wrap = document.getElementById('prepBarWrap');
+    if (wrap) wrap.setAttribute('aria-hidden', state.desktop ? 'false' : 'true');
+    if (!state.desktop) setLastInputDebug('');
+  }
+
+  function buildSwipe2Labels(classDir) {
+    var m = PREP_BY_CLASS[classDir];
+    if (!m) return null;
+    return {
+      up: m.up,
+      down: m.down,
+      left: m.left,
+      right: m.right
+    };
+  }
+
+  function clearSwipe2Timeout() {
+    if (state.swipe2Timer) {
+      clearTimeout(state.swipe2Timer);
+      state.swipe2Timer = null;
+    }
+  }
+
+  function scheduleSwipe2Timeout() {
+    clearSwipe2Timeout();
+    var ms = getSwipe2TimeoutMs();
+    if (ms == null) return;
+    state.swipe2Timer = setTimeout(function () {
+      if (!state.awaitingSecondSwipe) return;
+      state.awaitingSecondSwipe = false;
+      state.firstSwipeClass = null;
+      renderCompass();
+      updateSwipeDebug();
+    }, ms);
+  }
+
+  function resetSwipePhase() {
+    clearSwipe2Timeout();
+    state.awaitingSecondSwipe = false;
+    state.firstSwipeClass = null;
+    renderCompass();
+    updateSwipeDebug();
+  }
+
+  function renderCompass() {
+    var frame = document.getElementById('compassFrame');
+    if (!frame) return;
+    var phase2 = !!(state.running && !state.paused && state.current && state.awaitingSecondSwipe && state.firstSwipeClass);
+    frame.classList.toggle('compass-phase2', phase2);
+    var labels = phase2 ? buildSwipe2Labels(state.firstSwipeClass) : COMPASS_SWIPE1;
+    if (phase2 && !labels) labels = COMPASS_SWIPE1;
+    document.getElementById('cLabelUp').textContent = labels.up;
+    document.getElementById('cLabelDown').textContent = labels.down;
+    document.getElementById('cLabelLeft').textContent = labels.left;
+    document.getElementById('cLabelRight').textContent = labels.right;
+    ['up', 'down', 'left', 'right'].forEach(function (d) {
+      var edge = frame.querySelector('.compass-edge[data-dir="' + d + '"]');
+      if (edge) edge.classList.toggle('phase2', phase2);
+    });
+  }
+
+  function flashCompassEdge(dir) {
+    var frame = document.getElementById('compassFrame');
+    if (!frame) return;
+    var edge = frame.querySelector('.compass-edge[data-dir="' + dir + '"]');
+    if (!edge) return;
+    [].forEach.call(frame.querySelectorAll('.compass-edge--lit'), function (el) {
+      el.classList.remove('compass-edge--lit');
+    });
+    edge.classList.add('compass-edge--lit');
+    if (state.compassFlashTimer) clearTimeout(state.compassFlashTimer);
+    state.compassFlashTimer = setTimeout(function () {
+      edge.classList.remove('compass-edge--lit');
+      state.compassFlashTimer = null;
+    }, 380);
+  }
+
+  function showAnswerFeedback(correct, q) {
+    var fb = document.getElementById('feedback');
+    var card = document.getElementById('mainCard');
+    fb.className = 'feedback ' + (correct ? 'ok' : 'bad');
+    fb.textContent = q && q.note ? q.note : '';
+    card.classList.remove('flash', 'ok', 'bad');
+    void card.offsetWidth;
+    card.classList.add('flash', correct ? 'ok' : 'bad');
+    clearTimeout(state.feedbackTimer);
+    state.feedbackTimer = setTimeout(function () {
+      fb.textContent = '';
+      fb.className = 'feedback';
+      card.classList.remove('flash', 'ok', 'bad');
+    }, POST_ANSWER_MS);
+  }
+
+  function updateHUD() {
+    var appEl = document.getElementById('app');
+    if (appEl) appEl.classList.toggle('show-combo', state.mode === 'sprint' && !state.boss);
+    document.getElementById('score').textContent = String(state.score);
+    document.getElementById('combo').textContent = String(state.combo);
+    const acc = state.sessionAttempts
+      ? Math.round(100 * state.sessionCorrect / state.sessionAttempts) + '%'
+      : '—';
+    document.getElementById('accuracy').textContent = acc;
+    document.getElementById('modeLine').textContent = 'Mode: ' + MODE_LABELS[state.mode] +
+      (state.boss ? ' (Boss)' : '');
+    const sprint = loadSettings().sprintSec;
+    const timerEl = document.getElementById('timer');
+    if (state.mode === 'sprint' && state.running && !state.paused && !state.boss) {
+      timerEl.textContent = String(Math.ceil(state.sprintRemaining));
+    } else if (state.mode === 'sprint' && state.boss) {
+      timerEl.textContent = 'Boss';
+    } else if (state.mode === 'sprint') {
+      timerEl.textContent = state.running ? String(sprint) : '—';
+    } else {
+      timerEl.textContent = '—';
+    }
+    document.getElementById('btnMode').textContent = 'Mode: ' + MODE_LABELS[state.mode];
+    const boss = document.getElementById('bossBanner');
+    if (state.boss) {
+      boss.style.display = 'block';
+      boss.textContent = 'Boss: fix mistakes — answer each card correctly 2 times in a row';
+    } else {
+      boss.style.display = 'none';
+    }
+  }
+
+  function activePool() {
+    const settings = loadSettings();
+    if (state.mode === 'confusers') return [];
+    let pool = state.bank.slice();
+    if (state.mode === 'mistakes') {
+      const th = settings.mistakeAccThreshold;
+      pool = pool.filter(function (q) {
+        const st = loadStats()[q.id];
+        if (!st) return false;
+        if (st.wrong > 0) return true;
+        if (st.attempts === 0) return false;
+        return accuracyForCard(q.id) < th;
+      });
+      if (!pool.length) pool = state.bank.slice();
+    }
+    return pool;
+  }
+
+  function pickWeightedRandom(pool) {
+    if (!pool.length) return null;
+    let total = 0;
+    const weights = pool.map(function (q) {
+      const st = loadStats()[q.id];
+      const w = st && st.weight != null ? st.weight : 1;
+      total += w;
+      return w;
+    });
+    let r = Math.random() * total;
+    for (let i = 0; i < pool.length; i++) {
+      r -= weights[i];
+      if (r <= 0) return pool[i];
+    }
+    return pool[pool.length - 1];
+  }
+
+  function dequeueQuickRetry() {
+    if (!state.quickRetry.length) return null;
+    if (state.questionsUntilRetry > 0) return null;
+    return state.quickRetry.shift();
+  }
+
+  function scheduleRetry(q) {
+    const n = 3 + Math.floor(Math.random() * 3);
+    state.quickRetry.push({ q: q, after: n });
+  }
+
+  function nextQuestion() {
+    if (state.mode === 'confusers') return nextConfuserQuestion();
+
+    const qr = dequeueQuickRetry();
+    if (qr) {
+      state.questionsUntilRetry = qr.after;
+      return qr.q;
+    }
+
+    const pool = activePool();
+    if (!pool.length) return null;
+    return pickWeightedRandom(pool);
+  }
+
+  function tickRetryCounter() {
+    if (state.quickRetry.length && state.questionsUntilRetry > 0) {
+      state.questionsUntilRetry -= 1;
+    }
+  }
+
+  function nextConfuserQuestion() {
+    const sets = state.confuserSets;
+    if (!sets.length) return null;
+    if (state.confuserIndex >= sets.length) state.confuserIndex = 0;
+    const set = sets[state.confuserIndex];
+    if (!set.items.length) return null;
+    if (state.confuserPos >= set.items.length) {
+      state.confuserIndex++;
+      state.confuserPos = 0;
+      return nextConfuserQuestion();
+    }
+    const item = set.items[state.confuserPos];
+    state.confuserPos++;
+    return resolveConfuserItem(item, set.note);
+  }
+
+  function resolveConfuserItem(item, setNote) {
+    if (typeof item === 'string') {
+      const q = state.bank.find(function (x) { return x.id === item; });
+      if (q) {
+        const copy = Object.assign({}, q);
+        if (setNote && !copy.note) copy.note = setNote;
+        return copy;
+      }
+      return null;
+    }
+    return Object.assign({}, item);
+  }
+
+  function displayQuestion(q) {
+    clearSwipe2Timeout();
+    state.current = q;
+    state.awaitingSecondSwipe = false;
+    state.firstSwipeClass = null;
+    var pt = document.getElementById('promptText');
+    pt.textContent = q ? q.prompt : 'No questions';
+    document.getElementById('groupText').textContent = q && q.group ? q.group : '';
+    document.getElementById('feedback').textContent = '';
+    updateSwipeDebug();
+    renderCompass();
+  }
+
+  function updateSwipeDebug() {
+    if (!state.desktop) return;
+    const d = document.getElementById('swipeDebug');
+    if (!state.running || state.paused || !state.current) {
+      d.textContent = '';
+      return;
+    }
+    let s = '';
+    if (state.awaitingSecondSwipe && state.firstSwipeClass) {
+      s = 'swipe1: ' + DIR_SYMBOL[state.firstSwipeClass] + '  swipe2: (second)';
+    } else if (state.awaitingSecondSwipe) {
+      s = 'swipe1: …';
+    } else {
+      s = 'swipe1: —  swipe2: —';
+    }
+    d.textContent = s;
+  }
+
+  function setSwipe2Debug(secondDir) {
+    if (!state.desktop) return;
+    const d = document.getElementById('swipeDebug');
+    if (state.firstSwipeClass) {
+      d.textContent = 'swipe1: ' + DIR_SYMBOL[state.firstSwipeClass] + '  swipe2: ' + DIR_SYMBOL[secondDir];
+    }
+  }
+
+  function setLastInputDebug(text) {
+    if (!state.desktop) return;
+    var el = document.getElementById('lastInputDebug');
+    if (el) el.textContent = text || '';
+  }
+
+  function submitPrepAnswer(prep, source) {
+    if (!state.running || state.paused || !state.current) return;
+    clearSwipe2Timeout();
+    state.awaitingSecondSwipe = false;
+    state.firstSwipeClass = null;
+    updateSwipeDebug();
+    renderCompass();
+    if (state.desktop) {
+      var label = prep ? normalizePrep(prep) : '?';
+      setLastInputDebug('last input: ' + label + ' (' + (source || 'button') + ')');
+    }
+
+    var q = state.current;
+    var answers = q.answer;
+    var correct = prep && answers.some(function (a) {
+      return normalizePrep(a) === normalizePrep(prep) ||
+        (normalizePrep(prep) === 'to' && normalizePrep(a) === 'to');
+    });
+
+    state.sessionAttempts += 1;
+    if (correct) state.sessionCorrect += 1;
+
+    updateStat(q.id, correct);
+
+    if (state.mode === 'sprint' && !state.boss && !correct) {
+      state.sprintMistakes.add(q.id);
+    }
+
+    var skipAdvance = false;
+    var sprintComboActive = state.mode === 'sprint' && !state.boss;
+
+    var prepInBlank = correct ? String(prep || '') : (answers && answers.length ? String(answers[0]) : '?');
+    var pt = document.getElementById('promptText');
+    pt.innerHTML = promptHtmlWithFilledBlank(q, prepInBlank, correct);
+    showAnswerFeedback(correct, q);
+
+    if (correct) {
+      var pts = 10;
+      if (sprintComboActive) pts += state.combo;
+      state.score += pts;
+      if (sprintComboActive) state.combo += 1;
+      if (state.boss) {
+        state.bossProgress[q.id] = (state.bossProgress[q.id] || 0) + 1;
+        if (state.bossProgress[q.id] >= 2) {
+          state.bossQueue = state.bossQueue.filter(function (id) { return id !== q.id; });
+        }
+        if (!state.bossQueue.length) {
+          endBoss();
+          skipAdvance = true;
+        }
+      }
+    } else {
+      if (sprintComboActive) state.combo = 0;
+      if (!correct && q) scheduleRetry(q);
+    }
+
+    tickRetryCounter();
+    updateHUD();
+
+    if (skipAdvance) return;
+    setTimeout(function () {
+      advanceAfterAnswer();
+    }, POST_ANSWER_MS);
+  }
+
+  function handleSwipeDirection(dir) {
+    if (!state.running || state.paused || !state.current) return;
+
+    if (!state.awaitingSecondSwipe) {
+      state.firstSwipeClass = dir;
+      state.awaitingSecondSwipe = true;
+      renderCompass();
+      flashCompassEdge(dir);
+      scheduleSwipe2Timeout();
+      updateSwipeDebug();
+      return;
+    }
+
+    var classDir = state.firstSwipeClass;
+    var prep = prepFromSwipes(classDir, dir);
+    setSwipe2Debug(dir);
+    flashCompassEdge(dir);
+    submitPrepAnswer(prep, 'swipe');
+  }
+
+  function wirePrepBar() {
+    var bar = document.getElementById('prepBar');
+    if (!bar) return;
+    bar.textContent = '';
+    DESKTOP_PREP_BUTTONS.forEach(function (p) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'prep-btn';
+      b.textContent = p;
+      b.setAttribute('data-prep', p);
+      b.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        if (!state.desktop) return;
+        submitPrepAnswer(p, 'button');
+      });
+      bar.appendChild(b);
+    });
+  }
+
+  function advanceAfterAnswer() {
+    if (!state.running || state.paused) return;
+    if (state.boss) {
+      const q = pickBossQuestion();
+      displayQuestion(q);
+      updateSwipeDebug();
+      return;
+    }
+    const nq = nextQuestion();
+    displayQuestion(nq);
+    updateSwipeDebug();
+  }
+
+  function pickBossQuestion() {
+    const ids = state.bossQueue.slice();
+    if (!ids.length) return null;
+    const id = ids[Math.floor(Math.random() * ids.length)];
+    return state.bank.find(function (q) { return q.id === id; }) || null;
+  }
+
+  function endBoss() {
+    state.boss = false;
+    state.bossQueue = [];
+    state.bossProgress = {};
+    state.mode = 'practice';
+    state.running = false;
+    state.paused = false;
+    stopSprintTimer();
+    document.getElementById('promptText').textContent = 'Boss complete! Nice work.';
+    renderCompass();
+    updateHUD();
+  }
+
+  function startSprintTimer() {
+    clearInterval(state.sprintTimerId);
+    const sec = loadSettings().sprintSec;
+    state.sprintRemaining = sec;
+    state.sprintTimerId = setInterval(function () {
+      if (state.paused || state.boss) return;
+      state.sprintRemaining -= 0.1;
+      if (state.sprintRemaining <= 0) {
+        state.sprintRemaining = 0;
+        clearInterval(state.sprintTimerId);
+        onSprintEnd();
+      }
+      updateHUD();
+    }, 100);
+  }
+
+  function onSprintEnd() {
+    const mistakes = Array.from(state.sprintMistakes);
+    if (mistakes.length) {
+      state.boss = true;
+      state.bossQueue = mistakes.slice();
+      state.bossProgress = {};
+      state.running = true;
+      state.paused = false;
+      const q = pickBossQuestion();
+      displayQuestion(q);
+      updateHUD();
+      return;
+    }
+    state.running = false;
+    document.getElementById('promptText').textContent = 'Sprint over! No mistakes.';
+    resetSwipePhase();
+    updateHUD();
+  }
+
+  function stopSprintTimer() {
+    clearInterval(state.sprintTimerId);
+    state.sprintTimerId = null;
+  }
+
+  function togglePause() {
+    if (!state.running) return;
+    state.paused = !state.paused;
+    document.getElementById('btnStart').textContent = state.paused ? 'Resume' : 'Pause';
+    if (state.paused) resetSwipePhase();
+  }
+
+  function cycleMode() {
+    const i = MODES.indexOf(state.mode);
+    state.mode = MODES[(i + 1) % MODES.length];
+    state.combo = 0;
+    if (state.boss) {
+      state.boss = false;
+      state.bossQueue = [];
+    }
+    updateHUD();
+  }
+
+  function startGame() {
+    if (state.questionsLoadError || !state.bank.length) return;
+    state.confuserSets = buildConfuserSetsFromBank(state.bank);
+    state.running = true;
+    state.paused = false;
+    state.score = 0;
+    state.combo = 0;
+    state.sessionAttempts = 0;
+    state.sessionCorrect = 0;
+    state.quickRetry = [];
+    state.questionsUntilRetry = 0;
+    state.sprintMistakes = new Set();
+    state.boss = false;
+    state.bossQueue = [];
+    state.confuserIndex = 0;
+    state.confuserPos = 0;
+
+    if (state.mode === 'sprint') {
+      startSprintTimer();
+    } else {
+      stopSprintTimer();
+    }
+
+    const q = nextQuestion();
+    displayQuestion(q);
+    document.getElementById('btnStart').textContent = 'Pause';
+    updateHUD();
+    applyHintOverlay();
+  }
+
+  function applyHintOverlay() {
+    const settings = loadSettings();
+    const el = document.getElementById('hintOverlay');
+    const show = settings.showHintPractice && state.mode === 'practice' && state.running;
+    if (!show) {
+      el.classList.remove('show');
+      return;
+    }
+    el.textContent = [
+      '↓↓ in  ↓→ on  ↓← at  ↓↑ between',
+      '↑↑ to  ↑↓ from  ↑→ into  ↑← out of',
+      '→→ about  →↑ for  →↓ of  →← as',
+      '←← with  ←↑ by  ←→ against  ←↓ to'
+    ].join('\n');
+    el.classList.add('show');
+  }
+
+  function wireSwipe() {
+    const cardArea = document.getElementById('cardArea');
+    const ptr = createPointerSwipe(handleSwipeDirection);
+
+    cardArea.addEventListener('touchstart', ptr.start, { passive: true });
+    cardArea.addEventListener('touchmove', ptr.move, { passive: false });
+    cardArea.addEventListener('touchend', ptr.end);
+    cardArea.addEventListener('touchcancel', ptr.cancel);
+
+    if (isDesktopMode()) {
+      const drag = createMouseDragSwipe(handleSwipeDirection);
+      cardArea.addEventListener('mousedown', drag.down);
+      cardArea.addEventListener('mousemove', drag.move);
+      window.addEventListener('mouseup', drag.up);
+      cardArea.addEventListener('mouseleave', drag.leave);
+    }
+
+    window.addEventListener('keydown', function (ev) {
+      if (!isDesktopMode()) return;
+      if (!state.running || state.paused || !state.current) return;
+      const t = ev.target;
+      if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT')) return;
+      const dir = KEY_TO_DIR[ev.key];
+      if (!dir) return;
+      ev.preventDefault();
+      handleSwipeDirection(dir);
+    });
+  }
+
+  function wireUI() {
+    document.getElementById('btnStart').addEventListener('click', function () {
+      if (!state.running) {
+        startGame();
+      } else {
+        togglePause();
+      }
+    });
+    document.getElementById('btnMode').addEventListener('click', function (ev) {
+      ev.preventDefault();
+      cycleMode();
+    });
+    document.getElementById('btnSettings').addEventListener('click', function () {
+      openSettings();
+    });
+    document.getElementById('btnCloseSettings').addEventListener('click', function () {
+      document.getElementById('settingsOverlay').classList.remove('open');
+    });
+    document.getElementById('btnResetStats').addEventListener('click', function () {
+      if (confirm('Clear all per-card stats?')) {
+        localStorage.removeItem(STORAGE_STATS);
+        updateHUD();
+      }
+    });
+    document.getElementById('btnResetAppData').addEventListener('click', function () {
+      if (!confirm('Clear all stats and settings stored in this browser? Questions always load from questions.json.')) return;
+      clearAppLocalStorage();
+      document.getElementById('settingsOverlay').classList.remove('open');
+      updateHUD();
+    });
+    document.getElementById('setSprint').addEventListener('change', function () {
+      const s = loadSettings();
+      s.sprintSec = parseInt(document.getElementById('setSprint').value, 10);
+      saveSettings(s);
+    });
+    document.getElementById('setAcc').addEventListener('change', function () {
+      const s = loadSettings();
+      s.mistakeAccThreshold = parseInt(document.getElementById('setAcc').value, 10) || 70;
+      saveSettings(s);
+    });
+    document.getElementById('setHint').addEventListener('change', function () {
+      const s = loadSettings();
+      s.showHintPractice = document.getElementById('setHint').checked;
+      saveSettings(s);
+      applyHintOverlay();
+    });
+    document.getElementById('setSwipe2').addEventListener('change', function () {
+      const s = loadSettings();
+      s.swipe2Timeout = document.getElementById('setSwipe2').value;
+      saveSettings(s);
+    });
+    document.getElementById('setUnlimitedNonSprint').addEventListener('change', function () {
+      const s = loadSettings();
+      s.unlimitedNonSprintSwipe2 = document.getElementById('setUnlimitedNonSprint').checked;
+      saveSettings(s);
+    });
+
+    document.getElementById('btnEdit').addEventListener('click', function () {
+      var ta = document.getElementById('editArea');
+      ta.value = state.questionsLoadError
+        ? ('/* ' + state.questionsLoadError + ' */\n')
+        : JSON.stringify(state.bank, null, 2);
+      document.getElementById('editOverlay').classList.add('open');
+    });
+    document.getElementById('btnCancelEdit').addEventListener('click', function () {
+      document.getElementById('editOverlay').classList.remove('open');
+    });
+    document.getElementById('btnReloadQuestions').addEventListener('click', function () {
+      var wasRunning = state.running;
+      loadQuestionsFromFile().then(function () {
+        document.getElementById('editArea').value = state.questionsLoadError
+          ? ('/* ' + state.questionsLoadError + ' */\n')
+          : JSON.stringify(state.bank, null, 2);
+        if (wasRunning) stopSessionToIdle();
+        updateHUD();
+      });
+    });
+  }
+
+  function openSettings() {
+    const s = loadSettings();
+    document.getElementById('setSprint').value = String(s.sprintSec);
+    document.getElementById('setAcc').value = String(s.mistakeAccThreshold);
+    document.getElementById('setHint').checked = !!s.showHintPractice;
+    document.getElementById('setSwipe2').value = s.swipe2Timeout != null ? String(s.swipe2Timeout) : '8';
+    document.getElementById('setUnlimitedNonSprint').checked = s.unlimitedNonSprintSwipe2 !== false;
+    document.getElementById('settingsOverlay').classList.add('open');
+  }
+
+  function init() {
+    setDesktopUI();
+    wirePrepBar();
+    wireSwipe();
+    wireUI();
+    window.addEventListener('resize', setDesktopUI);
+    renderCompass();
+    loadQuestionsFromFile().then(function () {
+      updateHUD();
+    });
+  }
+
+  init();
+})();
+  </script>
+</body>
+</html>
