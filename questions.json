@@ -1534,8 +1534,7 @@
     "ru_note": "«as» = как/в качестве (роль/название).",
     "context_ru": "роль/название: as = «как/в качестве»",
     "example_blank": "He can pass __ a local."
-  }
-][
+  },
   {
     "id": "adj_excellent_at",
     "prompt": "excellent __",
