@@ -150,12 +150,14 @@
     .prompt-fill { font-weight: 800; padding: 0 2px; border-radius: 4px; }
     .prompt-fill--ok { color: var(--ok); background: rgba(46, 204, 113, 0.15); }
     .prompt-fill--bad { color: var(--bad); background: rgba(231, 76, 60, 0.12); }
-    .group-label {
-      margin-top: 12px;
+    .prompt-extra {
+      margin-top: 10px;
       font-size: 14px;
+      line-height: 1.4;
       color: var(--muted);
-      min-height: 1.3em;
+      font-weight: 500;
     }
+    .prompt-extra--example { font-style: italic; }
     .class-hint { display: none; }
     .feedback {
       margin-top: 14px;
@@ -332,7 +334,8 @@
         <div class="compass-centre">
           <div class="card" id="mainCard">
             <div class="prompt" id="promptText">Press Start</div>
-            <div class="group-label" id="groupText"></div>
+            <div class="prompt-extra" id="contextRuLine" hidden></div>
+            <div class="prompt-extra prompt-extra--example" id="exampleBlankLine" hidden></div>
             <div class="class-hint" id="classHint"></div>
             <div class="feedback" id="feedback"></div>
           </div>
@@ -633,7 +636,6 @@
     document.getElementById('btnStart').textContent = 'Start';
     document.getElementById('feedback').textContent = '';
     document.getElementById('feedback').className = 'feedback';
-    document.getElementById('groupText').textContent = '';
     const pt = document.getElementById('promptText');
     if (state.questionsLoadError) {
       pt.textContent = 'Cannot load questions.';
@@ -642,6 +644,7 @@
     } else {
       pt.textContent = 'Press Start';
     }
+    updatePromptExtras(null);
     applyHintOverlay();
     updateHUD();
   }
@@ -661,6 +664,7 @@
       if (!state.running) {
         document.getElementById('promptText').textContent =
           state.bank.length ? 'Press Start' : 'No questions loaded.';
+        updatePromptExtras(null);
       }
     } catch (e) {
       state.bank = [];
@@ -668,6 +672,7 @@
       const msg = e && e.message ? e.message : String(e);
       setQuestionsLoadError('Failed to load questions: ' + msg);
       document.getElementById('promptText').textContent = 'Cannot load questions.';
+      updatePromptExtras(null);
     }
   }
 
@@ -979,6 +984,21 @@
     return Object.assign({}, item);
   }
 
+  function updatePromptExtras(q) {
+    var cr = document.getElementById('contextRuLine');
+    var eb = document.getElementById('exampleBlankLine');
+    var ctx = q && q.context_ru != null ? String(q.context_ru).trim() : '';
+    var ex = q && q.example_blank != null ? String(q.example_blank).trim() : '';
+    if (cr) {
+      cr.textContent = ctx;
+      cr.hidden = !ctx;
+    }
+    if (eb) {
+      eb.textContent = ex;
+      eb.hidden = !ex;
+    }
+  }
+
   function displayQuestion(q) {
     clearSwipe2Timeout();
     state.current = q;
@@ -986,7 +1006,7 @@
     state.firstSwipeClass = null;
     var pt = document.getElementById('promptText');
     pt.textContent = q ? q.prompt : 'No questions';
-    document.getElementById('groupText').textContent = q && q.group ? q.group : '';
+    updatePromptExtras(q);
     document.getElementById('feedback').textContent = '';
     updateSwipeDebug();
     renderCompass();
@@ -1058,6 +1078,7 @@
     var prepInBlank = correct ? String(prep || '') : (answers && answers.length ? String(answers[0]) : '?');
     var pt = document.getElementById('promptText');
     pt.innerHTML = promptHtmlWithFilledBlank(q, prepInBlank, correct);
+    updatePromptExtras(q);
     showAnswerFeedback(correct, q);
 
     if (correct) {
@@ -1157,6 +1178,7 @@
     state.paused = false;
     stopSprintTimer();
     document.getElementById('promptText').textContent = 'Boss complete! Nice work.';
+    updatePromptExtras(null);
     renderCompass();
     updateHUD();
   }
@@ -1192,6 +1214,7 @@
     }
     state.running = false;
     document.getElementById('promptText').textContent = 'Sprint over! No mistakes.';
+    updatePromptExtras(null);
     resetSwipePhase();
     updateHUD();
   }
