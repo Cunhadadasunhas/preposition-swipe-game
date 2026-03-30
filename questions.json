@@ -1415,18 +1415,7 @@
     "context_ru": "благодарить за",
     "example_blank": "Thank you __ your help."
   },
-  {
-    "id": "wander__around__c72433f5",
-    "prompt": "wander __",
-    "answer": [
-      "around"
-    ],
-    "group": "prepositions",
-    "note": "",
-    "tags": [],
-    "context_ru": "бродить где‑то",
-    "example_blank": "Wander __ the city."
-  },
+  
   {
     "id": "worry_sbsth__about__fd68fa44",
     "prompt": "worry __ sb/sth",
