@@ -1,3074 +1,2870 @@
 [
   {
-    "id": "adj_excellent_at",
-    "prompt": "excellent __",
-    "answer": [
-      "at"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "отлично (в чём-то) (навык/занятие)",
-    "ru_note": "",
-    "context_ru": "навык/умение/занятие",
-    "example_blank": "I’m excellent __ maths."
-  },
-  {
-    "id": "adj_good_at",
-    "prompt": "good __",
-    "answer": [
-      "at"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "хорош(а) (в чём-то) (навык/занятие)",
-    "ru_note": "",
-    "context_ru": "навык/умение/занятие",
-    "example_blank": "I’m good __ maths."
-  },
-  {
-    "id": "adj_bad_at",
-    "prompt": "bad __",
-    "answer": [
-      "at"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "плох(а) (в чём-то) (навык/занятие)",
-    "ru_note": "",
-    "context_ru": "навык/умение/занятие",
-    "example_blank": "I’m bad __ maths."
-  },
-  {
-    "id": "adj_experienced_in",
-    "prompt": "experienced __",
-    "answer": [
-      "in"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "опытный/опытна (в сфере) (сфера/область)",
-    "ru_note": "",
-    "context_ru": "сфера/область/вовлечённость",
-    "example_blank": "I’m experienced __ finance."
-  },
-  {
-    "id": "adj_interested_in",
-    "prompt": "interested __",
-    "answer": [
-      "in"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "заинтересован(а) (в) (сфера/область)",
-    "ru_note": "",
-    "context_ru": "сфера/область/вовлечённость",
-    "example_blank": "I’m interested __ finance."
-  },
-  {
-    "id": "adj_successful_in",
-    "prompt": "successful __",
-    "answer": [
-      "in"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "успешен/успешна (в сфере) (сфера/область)",
-    "ru_note": "",
-    "context_ru": "сфера/область/вовлечённость",
-    "example_blank": "I’m successful __ finance."
-  },
-  {
-    "id": "adj_keen_on",
-    "prompt": "keen __",
-    "answer": [
-      "on"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "увлечён(а) / любит (о/по теме)",
-    "ru_note": "",
-    "context_ru": "на/о (зависит от выражения)",
-    "example_blank": "I’m keen __ the plan."
-  },
-  {
-    "id": "adj_dependent_on",
-    "prompt": "dependent __",
-    "answer": [
-      "on"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "зависим(а) (от) (о/по теме)",
-    "ru_note": "",
-    "context_ru": "на/о (зависит от выражения)",
-    "example_blank": "I’m dependent __ the plan."
-  },
-  {
-    "id": "adj_happy_for",
-    "prompt": "happy __ sb",
-    "answer": [
-      "for"
-    ],
-    "group": "adjectives",
-    "note": "FOR = happy for someone",
-    "tags": [
-      "confuser:happy_for_with_about"
-    ],
-    "ru": "рад(а) за кого-то",
-    "ru_note": "FOR = happy for someone",
-    "context_ru": "эмоция к человеку: «рад(а) за кого-то»",
-    "example_blank": "I’m happy __ you."
-  },
-  {
-    "id": "adj_happy_with",
-    "prompt": "happy __ sth",
-    "answer": [
-      "with"
-    ],
-    "group": "adjectives",
-    "note": "WITH = happy with something",
-    "tags": [
-      "confuser:happy_for_with_about"
-    ],
-    "ru": "доволен/довольна чем-то",
-    "ru_note": "WITH = happy with something",
-    "context_ru": "удовлетворённость результатом/вещью: «доволен(на)»",
-    "example_blank": "I’m happy __ the result."
-  },
-  {
-    "id": "adj_happy_about",
-    "prompt": "happy __ sth",
-    "answer": [
-      "about"
-    ],
-    "group": "adjectives",
-    "note": "ABOUT = happy about news/situation",
-    "tags": [
-      "confuser:happy_for_with_about"
-    ],
-    "ru": "рад(а) по поводу (новости/ситуации)",
-    "ru_note": "ABOUT = happy about news/situation",
-    "context_ru": "эмоция по поводу новости/ситуации",
-    "example_blank": "I’m happy __ the news."
-  },
-  {
-    "id": "adj_responsible_for",
-    "prompt": "responsible __",
-    "answer": [
-      "for"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "ответственен/ответственна (за) (за/для)",
-    "ru_note": "",
-    "context_ru": "",
-    "example_blank": "I’m responsible __ it."
-  },
-  {
-    "id": "adj_famous_for",
-    "prompt": "famous __",
-    "answer": [
-      "for"
-    ],
-    "group": "adjectives",
-    "note": "FOR = famous for something",
-    "tags": [
-      "confuser:known_as_famous_for"
-    ],
-    "ru": "знаменит(а) (тем, что) (за/для)",
-    "ru_note": "FOR = famous for something",
-    "context_ru": "причина славы: «знаменит тем, что»",
-    "example_blank": "I’m famous __ it."
-  },
-  {
-    "id": "adj_grateful_for",
-    "prompt": "grateful __",
-    "answer": [
-      "for"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "благодарен/благодарна (за) (за/для)",
-    "ru_note": "",
-    "context_ru": "",
-    "example_blank": "I’m grateful __ it."
-  },
-  {
-    "id": "adj_delighted_with",
-    "prompt": "delighted __",
-    "answer": [
-      "with"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "очень доволен/довольна (с/чем-то)",
-    "ru_note": "",
-    "context_ru": "с/взаимодействие или оценка результата (зависит от выражения)",
-    "example_blank": "I’m delighted __ the result."
-  },
-  {
-    "id": "adj_pleased_with",
-    "prompt": "pleased __",
-    "answer": [
-      "with"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "доволен/довольна (с/чем-то)",
-    "ru_note": "",
-    "context_ru": "с/взаимодействие или оценка результата (зависит от выражения)",
-    "example_blank": "I’m pleased __ the result."
-  },
-  {
-    "id": "adj_impressed_by",
-    "prompt": "impressed __",
-    "answer": [
-      "by"
-    ],
-    "group": "adjectives",
-    "note": "BY = impressed by what caused it",
-    "tags": [
-      "confuser:impressed_by_with"
-    ],
-    "ru": "впечатлён(а)",
-    "ru_note": "BY = impressed by what caused it",
-    "context_ru": "впечатление: by = причина, with = результат/вещь",
-    "example_blank": "I’m impressed __ her speech."
-  },
-  {
-    "id": "adj_impressed_with",
-    "prompt": "impressed __",
-    "answer": [
-      "with"
-    ],
-    "group": "adjectives",
-    "note": "WITH = impressed with the result/thing",
-    "tags": [
-      "confuser:impressed_by_with"
-    ],
-    "ru": "впечатлён(а)",
-    "ru_note": "WITH = impressed with the result/thing",
-    "context_ru": "впечатление: by = причина, with = результат/вещь",
-    "example_blank": "I’m impressed __ the result."
-  },
-  {
-    "id": "adj_familiar_to",
-    "prompt": "familiar __ sb (well known)",
-    "answer": [
-      "to"
-    ],
-    "group": "adjectives",
-    "note": "TO = well known to",
-    "tags": [
-      "confuser:familiar_to_with"
-    ],
-    "ru": "знаком/известен кому-то",
-    "ru_note": "TO = well known to",
-    "context_ru": "familiar to = узнаваем для; familiar with = хорошо знать",
-    "example_blank": "I’m familiar __ you."
-  },
-  {
-    "id": "adj_familiar_with",
-    "prompt": "familiar __ sth (know well)",
-    "answer": [
-      "with"
-    ],
-    "group": "adjectives",
-    "note": "WITH = know well",
-    "tags": [
-      "confuser:familiar_to_with"
-    ],
-    "ru": "хорошо знаком с",
-    "ru_note": "WITH = know well",
-    "context_ru": "familiar to = узнаваем для; familiar with = хорошо знать",
-    "example_blank": "I’m familiar __ the result."
-  },
-  {
-    "id": "adj_crazy_about",
-    "prompt": "crazy __",
-    "answer": [
-      "about"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "без ума (от) (о/по поводу)",
-    "ru_note": "",
-    "context_ru": "о/по поводу темы/ситуации",
-    "example_blank": "I’m crazy __ the news."
-  },
-  {
-    "id": "adj_curious_about",
-    "prompt": "curious __",
-    "answer": [
-      "about"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "любопытно (о/насчёт) (о/по поводу)",
-    "ru_note": "",
-    "context_ru": "о/по поводу темы/ситуации",
-    "example_blank": "I’m curious __ the news."
-  },
-  {
-    "id": "adj_excited_about",
-    "prompt": "excited __",
-    "answer": [
-      "about"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "взволнован(а)/рад(а) (по поводу) (о/по поводу)",
-    "ru_note": "",
-    "context_ru": "о/по поводу темы/ситуации",
-    "example_blank": "I’m excited __ the news."
-  },
-  {
-    "id": "adj_enthusiastic_about",
-    "prompt": "enthusiastic __ sth",
-    "answer": [
-      "about"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "в восторге/энтузиазм (по поводу) (о/по поводу)",
-    "ru_note": "",
-    "context_ru": "о/по поводу темы/ситуации",
-    "example_blank": "I’m enthusiastic __ the news."
-  },
-  {
-    "id": "adj_sorry_for",
-    "prompt": "feel sorry __ sb",
-    "answer": [
-      "for"
-    ],
-    "group": "confusers",
-    "note": "FOR = feel sorry for someone",
-    "tags": [
-      "confuser:sorry_for_about"
-    ],
-    "ru": "мне жаль кого-то / сочувствую",
-    "ru_note": "FOR = feel sorry for someone",
-    "context_ru": "сочувствие к человеку (не извинение)",
-    "example_blank": "I feel sorry __ him."
-  },
-  {
-    "id": "adj_sorry_about",
-    "prompt": "sorry __ sth",
-    "answer": [
-      "about"
-    ],
-    "group": "confusers",
-    "note": "ABOUT = sorry about something",
-    "tags": [
-      "confuser:sorry_for_about"
-    ],
-    "ru": "сожалею о / по поводу (чего-то)",
-    "ru_note": "ABOUT = sorry about something",
-    "context_ru": "извинение/сожаление по поводу ситуации",
-    "example_blank": "Sorry __ the delay."
-  },
-  {
-    "id": "adj_angry_with",
+    "id": "angry_sb__with__075ace84",
     "prompt": "angry __ sb",
     "answer": [
       "with"
     ],
-    "group": "confusers",
-    "note": "WITH = angry with a person",
-    "tags": [
-      "confuser:angry_with_about"
-    ],
-    "ru": "злой/зла",
-    "ru_note": "WITH = angry with a person",
-    "context_ru": "злость на человека",
-    "example_blank": "I’m angry __ him."
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "злой на человека",
+    "example_blank": "I'm angry __ him."
   },
   {
-    "id": "adj_angry_about",
+    "id": "angry_sth__about__85e5621f",
     "prompt": "angry __ sth",
     "answer": [
       "about"
     ],
-    "group": "confusers",
-    "note": "ABOUT = angry about a thing/situation",
-    "tags": [
-      "confuser:angry_with_about"
-    ],
-    "ru": "злой/зла",
-    "ru_note": "ABOUT = angry about a thing/situation",
-    "context_ru": "злость из‑за ситуации/факта",
-    "example_blank": "I’m angry __ the decision."
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "злой из‑за ситуации/вещи",
+    "example_blank": "I'm angry __ the delay."
   },
   {
-    "id": "adj_annoyed_with",
+    "id": "annoyed_sb__with__00e908f9",
     "prompt": "annoyed __ sb",
     "answer": [
       "with"
     ],
-    "group": "confusers",
-    "note": "WITH = annoyed with a person",
-    "tags": [
-      "confuser:annoyed_with_about"
-    ],
-    "ru": "раздражён(а)",
-    "ru_note": "WITH = annoyed with a person",
-    "context_ru": "раздражение на человека",
-    "example_blank": "She’s annoyed __ me."
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "раздражён на человека",
+    "example_blank": "I'm annoyed __ my neighbour."
   },
   {
-    "id": "adj_annoyed_about",
+    "id": "annoyed_sth__about__1dde9ba2",
     "prompt": "annoyed __ sth",
     "answer": [
       "about"
     ],
-    "group": "confusers",
-    "note": "ABOUT = annoyed about a thing/situation",
-    "tags": [
-      "confuser:annoyed_with_about"
-    ],
-    "ru": "раздражён(а)",
-    "ru_note": "ABOUT = annoyed about a thing/situation",
-    "context_ru": "раздражение из‑за ситуации",
-    "example_blank": "I’m annoyed __ the noise."
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "раздражён из‑за вещи/ситуации",
+    "example_blank": "I'm annoyed __ the noise."
   },
   {
-    "id": "adj_proud_of",
-    "prompt": "proud __",
+    "id": "bored_sbsth__with__28467f9c",
+    "prompt": "bored __ sb/sth",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "скучает из‑за / надоел человек/вещь",
+    "example_blank": "I'm bored __ this film."
+  },
+  {
+    "id": "certain__of__8c2a362c",
+    "prompt": "certain __",
     "answer": [
       "of"
     ],
-    "group": "adjectives",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "горд(а) (о/из/от)",
-    "ru_note": "",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "I’m proud __ it."
+    "context_ru": "уверен в чём‑то / что что‑то правда",
+    "example_blank": "I'm certain __ that."
   },
   {
-    "id": "adj_fond_of",
-    "prompt": "fond __",
+    "id": "identical__to__0ef3a029",
+    "prompt": "identical __",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "идентичен чему‑то",
+    "example_blank": "This is identical __ mine."
+  },
+  {
+    "id": "similar__to__ee9b5d4f",
+    "prompt": "similar __",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "похож на",
+    "example_blank": "This is similar __ yours."
+  },
+  {
+    "id": "suitable__for__0a3f4dad",
+    "prompt": "suitable __",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "подходит для (цели/человека/случая)",
+    "example_blank": "This is suitable __ kids."
+  },
+  {
+    "id": "sure__of__ced15e88",
+    "prompt": "sure __",
     "answer": [
       "of"
     ],
-    "group": "adjectives",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "питает слабость/любит (о/из/от)",
-    "ru_note": "",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "I’m fond __ it."
+    "context_ru": "уверен в чём‑то",
+    "example_blank": "I'm sure __ the answer."
   },
   {
-    "id": "adj_aware_of",
-    "prompt": "(un)aware __",
+    "id": "terrible_sth__at__519dfe9e",
+    "prompt": "terrible __ sth",
+    "answer": [
+      "at"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "ужасен в (навыке/занятии)",
+    "example_blank": "I'm terrible __ maths."
+  },
+  {
+    "id": "an_understanding__of__08a9abf0",
+    "prompt": "an understanding __",
     "answer": [
       "of"
     ],
-    "group": "adjectives",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "aware (о/из/от)",
-    "ru_note": "",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "I’m aware __ it."
+    "context_ru": "понимание (чего‑то)",
+    "example_blank": "an understanding __ the issue"
   },
   {
-    "id": "adj_typical_of",
-    "prompt": "typical __",
+    "id": "combine__with__6b241258",
+    "prompt": "combine __",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "сочетать с",
+    "example_blank": "Combine it __ water."
+  },
+  {
+    "id": "compare__with__70532a09",
+    "prompt": "compare __",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "сравнивать с",
+    "example_blank": "Compare this __ that."
+  },
+  {
+    "id": "compete_sb__with__aab994d5",
+    "prompt": "compete __ sb",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "соревноваться с кем‑то",
+    "example_blank": "They compete __ each other."
+  },
+  {
+    "id": "compete_sth__for__9a40f426",
+    "prompt": "compete __ sth",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "соревноваться за приз/должность",
+    "example_blank": "They compete __ the prize."
+  },
+  {
+    "id": "describe_sbsth_sb__as__c0fd3665",
+    "prompt": "describe sb/sth __ sb",
+    "answer": [
+      "as"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "описать как / назвать",
+    "example_blank": "She described him __ a genius."
+  },
+  {
+    "id": "excuse_sb__for__eb97b91d",
+    "prompt": "excuse sb __",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "извинять за",
+    "example_blank": "Excuse me __ being late."
+  },
+  {
+    "id": "be_made__of__cfab5b90",
+    "prompt": "be made __",
     "answer": [
       "of"
     ],
-    "group": "adjectives",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "типично для (о/из/от)",
-    "ru_note": "",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "I’m typical __ it."
+    "context_ru": "сделан из (материал)",
+    "example_blank": "It's made __ wood."
   },
   {
-    "id": "adj_accustomed_to",
-    "prompt": "accustomed __",
+    "id": "protest__against__d5133fd6",
+    "prompt": "protest __",
+    "answer": [
+      "against"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "протестовать против / из‑за",
+    "example_blank": "They protested __ the decision."
+  },
+  {
+    "id": "shout__at__46a37850",
+    "prompt": "shout __",
+    "answer": [
+      "at"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "кричать на (человека)",
+    "example_blank": "Don't shout __ me."
+  },
+  {
+    "id": "careless__about__c9beaa0e",
+    "prompt": "careless __",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "небрежный/невнимательный к",
+    "example_blank": "Careless __ details."
+  },
+  {
+    "id": "faithful__to__88dcabd9",
+    "prompt": "faithful __",
     "answer": [
       "to"
     ],
-    "group": "adjectives",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "привык(ла) к (к/в/для)",
-    "ru_note": "",
-    "context_ru": "направление/адресат/реакция",
-    "example_blank": "I’m accustomed __ you."
+    "context_ru": "верный/преданный",
+    "example_blank": "Faithful __ his wife."
   },
   {
-    "id": "adj_addicted_to",
-    "prompt": "addicted __",
+    "id": "frightened__of__6bf7c800",
+    "prompt": "frightened __",
     "answer": [
-      "to"
+      "of"
     ],
-    "group": "adjectives",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "зависим(а) от (к/в/для)",
-    "ru_note": "",
-    "context_ru": "направление/адресат/реакция",
-    "example_blank": "I’m addicted __ you."
+    "context_ru": "боится",
+    "example_blank": "Frightened __ dogs."
   },
   {
-    "id": "adj_cruel_to",
-    "prompt": "cruel __",
+    "id": "serious__about__13279d9e",
+    "prompt": "serious __",
     "answer": [
-      "to"
+      "about"
     ],
-    "group": "adjectives",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "жесток(ий/ая) к (к/в/для)",
-    "ru_note": "",
-    "context_ru": "направление/адресат/реакция",
-    "example_blank": "I’m cruel __ you."
+    "context_ru": "серьёзно относится к / насчёт",
+    "example_blank": "Serious __ the job."
   },
   {
-    "id": "adj_rude_to",
-    "prompt": "rude __",
+    "id": "surprised__at__266d5b24",
+    "prompt": "surprised __",
     "answer": [
-      "to"
+      "at"
     ],
-    "group": "adjectives",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "груб(ый/ая) с (к/в/для)",
-    "ru_note": "",
-    "context_ru": "направление/адресат/реакция",
-    "example_blank": "I’m rude __ you."
+    "context_ru": "удивлён",
+    "example_blank": "Surprised __ the result."
   },
   {
-    "id": "adj_respected_by",
-    "prompt": "respected __",
+    "id": "a_delay__in__6d5d92f0",
+    "prompt": "a delay __",
     "answer": [
-      "by"
+      "in"
     ],
-    "group": "adjectives",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "уважаем(ый/ая) (кем/чем)",
-    "ru_note": "",
-    "context_ru": "кем/чем вызвано или кем сделано (agent/cause)",
-    "example_blank": "I’m respected __ her speech."
+    "context_ru": "задержка в",
+    "example_blank": "a delay __ payment"
   },
   {
-    "id": "adj_amused_by",
-    "prompt": "amused __",
+    "id": "an_influence__on__cf408142",
+    "prompt": "an influence __",
     "answer": [
-      "by"
+      "on"
     ],
-    "group": "adjectives",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "позабавлен(а) (кем/чем)",
-    "ru_note": "",
-    "context_ru": "кем/чем вызвано или кем сделано (agent/cause)",
-    "example_blank": "I’m amused __ her speech."
+    "context_ru": "влияние на",
+    "example_blank": "an influence __ children"
   },
   {
-    "id": "adj_astonished_by",
-    "prompt": "astonished __",
+    "id": "a_need__for__a8df3948",
+    "prompt": "a need __",
     "answer": [
-      "by"
+      "for"
     ],
-    "group": "adjectives",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "поражён(а) (кем/чем)",
-    "ru_note": "",
-    "context_ru": "кем/чем вызвано или кем сделано (agent/cause)",
-    "example_blank": "I’m astonished __ her speech."
+    "context_ru": "нужда в",
+    "example_blank": "a need __ sleep"
   },
   {
-    "id": "adj_shocked_at",
+    "id": "the_opposite__of__ea8058c4",
+    "prompt": "the opposite __",
+    "answer": [
+      "of"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "противоположность",
+    "example_blank": "the opposite __ this"
+  },
+  {
+    "id": "a_relationship_sb__with__36233da5",
+    "prompt": "a relationship __ sb",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "отношения с",
+    "example_blank": "a relationship __ her boss"
+  },
+  {
+    "id": "benefit__from__0ed4e79a",
+    "prompt": "benefit __",
+    "answer": [
+      "from"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "извлекать пользу из",
+    "example_blank": "Benefit __ practice."
+  },
+  {
+    "id": "boast__about__dd2171e8",
+    "prompt": "boast __",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "хвастаться",
+    "example_blank": "Boast __ your success."
+  },
+  {
+    "id": "care_sbsth__about__aaa3d146",
+    "prompt": "care __ sb/sth",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "беспокоиться о / переживать за",
+    "example_blank": "I care __ you."
+  },
+  {
+    "id": "care_sb__for__6c27e7ae",
+    "prompt": "care __ sb",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "заботиться о / любить",
+    "example_blank": "I care __ her a lot."
+  },
+  {
+    "id": "exchange_sth_sth_else__for__d4dceffe",
+    "prompt": "exchange sth __ sth else",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "обменять на",
+    "example_blank": "Exchange it __ a new one."
+  },
+  {
+    "id": "hope__for__19235829",
+    "prompt": "hope __",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "надеяться на",
+    "example_blank": "Hope __ the best."
+  },
+  {
+    "id": "insist__on__44763d3c",
+    "prompt": "insist __",
+    "answer": [
+      "on"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "настаивать на",
+    "example_blank": "Insist __ paying."
+  },
+  {
+    "id": "mistake_sbsth_sbsth_else__for__b48a4547",
+    "prompt": "mistake sb/sth __ sb/sth else",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "перепутать с",
+    "example_blank": "Mistake her __ her sister."
+  },
+  {
+    "id": "pray_sbsth__for__d9189f24",
+    "prompt": "pray __ sb/sth",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "молиться за",
+    "example_blank": "Pray __ you."
+  },
+  {
+    "id": "replace_sth_sth_else__with__a18af243",
+    "prompt": "replace sth __ sth else",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "заменить на",
+    "example_blank": "Replace it __ a better one."
+  },
+  {
+    "id": "suspect_sb_sth__of__b16b0d49",
+    "prompt": "suspect sb __ sth",
+    "answer": [
+      "of"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "подозревать в",
+    "example_blank": "Suspect him __ theft."
+  },
+  {
+    "id": "take_care_sbsth__of__688c6759",
+    "prompt": "take care __ sb/sth",
+    "answer": [
+      "of"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "заботиться о",
+    "example_blank": "Take care __ yourself."
+  },
+  {
+    "id": "wait__for__e27aafdb",
+    "prompt": "wait __",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "ждать",
+    "example_blank": "Wait __ me."
+  },
+  {
+    "id": "warn_sb__about__d796f451",
+    "prompt": "warn sb __",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "предупредить о",
+    "example_blank": "Warn me __ the risks."
+  },
+  {
+    "id": "disgusted__with__3b15b0cc",
+    "prompt": "disgusted __",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "испытывает отвращение к",
+    "example_blank": "Disgusted __ his behaviour."
+  },
+  {
+    "id": "envious__of__5e81c534",
+    "prompt": "envious __",
+    "answer": [
+      "of"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "завидует",
+    "example_blank": "Envious __ her success."
+  },
+  {
+    "id": "guilty__of__5cc8ba30",
+    "prompt": "guilty __",
+    "answer": [
+      "of"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "виновен в",
+    "example_blank": "Guilty __ fraud."
+  },
+  {
+    "id": "patient__with__4ce147f0",
+    "prompt": "patient __",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "терпелив с",
+    "example_blank": "Patient __ children."
+  },
+  {
+    "id": "popular__with__0e6cf6ee",
+    "prompt": "popular __",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "популярен у (аудитория)",
+    "example_blank": "Popular __ teens."
+  },
+  {
+    "id": "shocked_a_factnews__at__6c6f5be1",
     "prompt": "shocked __ (a fact/news)",
     "answer": [
       "at"
     ],
-    "group": "confusers",
-    "note": "AT = shocked at a fact/news",
-    "tags": [
-      "confuser:shocked_at_by"
-    ],
-    "ru": "шокирован(а) (навык/занятие)",
-    "ru_note": "AT = shocked at a fact/news",
-    "context_ru": "шок: at = факт/новость; by = причина",
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "шокирован(а) фактом/новостью",
     "example_blank": "I was shocked __ the news."
   },
   {
-    "id": "adj_shocked_by",
+    "id": "shocked_what_caused_it__by__05e11512",
     "prompt": "shocked __ (what caused it)",
     "answer": [
       "by"
     ],
-    "group": "confusers",
-    "note": "BY = shocked by what caused it",
-    "tags": [
-      "confuser:shocked_at_by"
-    ],
-    "ru": "шокирован(а) (кем/чем)",
-    "ru_note": "BY = shocked by what caused it",
-    "context_ru": "шок: at = факт/новость; by = причина",
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "шокирован(а) тем, что это вызвало / чьим‑то поступком",
     "example_blank": "I was shocked __ what he did."
   },
   {
-    "id": "noun_answer_to",
-    "prompt": "an answer __",
-    "answer": [
-      "to"
-    ],
-    "group": "nouns",
-    "note": "",
-    "tags": [],
-    "ru": "ответ (к/в/для)",
-    "ru_note": "",
-    "context_ru": "направление/адресат/реакция",
-    "example_blank": "This is the answer __ your question."
-  },
-  {
-    "id": "noun_reply_to",
-    "prompt": "a reply __",
-    "answer": [
-      "to"
-    ],
-    "group": "nouns",
-    "note": "",
-    "tags": [],
-    "ru": "ответ (на письмо/сообщение) (к/в/для)",
-    "ru_note": "",
-    "context_ru": "направление/адресат/реакция",
-    "example_blank": "I sent a reply __ your email."
-  },
-  {
-    "id": "noun_pride_in",
-    "prompt": "(take) pride __",
-    "answer": [
-      "in"
-    ],
-    "group": "nouns",
-    "note": "",
-    "tags": [],
-    "ru": "pride (сфера/область)",
-    "ru_note": "",
-    "context_ru": "сфера/область/вовлечённость",
-    "example_blank": "Take pride __ your work."
-  },
-  {
-    "id": "noun_report_on",
-    "prompt": "a report __ sth",
-    "answer": [
-      "on"
-    ],
-    "group": "nouns",
-    "note": "",
-    "tags": [],
-    "ru": "отчёт (о/по теме)",
-    "ru_note": "",
-    "context_ru": "тема/о чём: report on",
-    "example_blank": "I read a report __ climate change."
-  },
-  {
-    "id": "noun_sympathy_for",
-    "prompt": "(feel) sympathy __",
-    "answer": [
-      "for"
-    ],
-    "group": "nouns",
-    "note": "",
-    "tags": [],
-    "ru": "sympathy (за/для)",
-    "ru_note": "",
-    "context_ru": "",
-    "example_blank": "I feel sympathy __ the victims."
-  },
-  {
-    "id": "noun_talent_for",
-    "prompt": "a talent __",
-    "answer": [
-      "for"
-    ],
-    "group": "nouns",
-    "note": "",
-    "tags": [],
-    "ru": "талант (за/для)",
-    "ru_note": "",
-    "context_ru": "",
-    "example_blank": "She has a talent __ languages."
-  },
-  {
-    "id": "noun_opportunity_to",
-    "prompt": "an opportunity __ (do sth)",
-    "answer": [
-      "to"
-    ],
-    "group": "nouns",
-    "note": "main pattern: an opportunity to do sth",
-    "tags": [],
-    "ru": "возможность (к/в/для)",
-    "ru_note": "main pattern: an opportunity to do sth",
-    "context_ru": "направление/адресат/реакция",
-    "example_blank": "It’s an opportunity __ growth."
-  },
-  {
-    "id": "noun_opportunity_for",
-    "prompt": "an opportunity __ sth",
-    "answer": [
-      "for"
-    ],
-    "group": "nouns",
-    "note": "also correct: an opportunity for sth",
-    "tags": [],
-    "ru": "возможность (за/для)",
-    "ru_note": "also correct: an opportunity for sth",
-    "context_ru": "",
-    "example_blank": "It’s an opportunity __ growth."
-  },
-  {
-    "id": "noun_knowledge_of",
-    "prompt": "knowledge __",
+    "id": "suspicious__of__e9f825fd",
+    "prompt": "suspicious __",
     "answer": [
       "of"
     ],
-    "group": "nouns",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "знание (о/из/от)",
-    "ru_note": "",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "He has knowledge __ the subject."
+    "context_ru": "подозрительный насчёт",
+    "example_blank": "Suspicious __ his motives."
   },
   {
-    "id": "noun_rise_in",
-    "prompt": "a rise __",
-    "answer": [
-      "in"
-    ],
-    "group": "nouns",
-    "note": "",
-    "tags": [],
-    "ru": "рост (сфера/область)",
-    "ru_note": "",
-    "context_ru": "сфера/область/вовлечённость",
-    "example_blank": "There was a rise __ prices."
-  },
-  {
-    "id": "noun_taste_of",
-    "prompt": "a taste __ (flavour / brief experience)",
-    "answer": [
-      "of"
-    ],
-    "group": "confusers",
-    "note": "OF = flavour / brief experience",
-    "tags": [
-      "confuser:taste_of_for"
-    ],
-    "ru": "вкус/привкус (о/из/от)",
-    "ru_note": "OF = flavour / brief experience",
-    "context_ru": "taste of = привкус/кусочек опыта; taste for = предпочтение",
-    "example_blank": "A taste __ freedom."
-  },
-  {
-    "id": "noun_taste_for",
-    "prompt": "a taste __ (liking / preference)",
+    "id": "a_reason__for__c5994aeb",
+    "prompt": "a reason __",
     "answer": [
       "for"
     ],
-    "group": "confusers",
-    "note": "FOR = liking / preference",
-    "tags": [
-      "confuser:taste_of_for"
-    ],
-    "ru": "вкус/привкус (за/для)",
-    "ru_note": "FOR = liking / preference",
-    "context_ru": "taste of = привкус/кусочек опыта; taste for = предпочтение",
-    "example_blank": "A taste __ jazz."
-  },
-  {
-    "id": "verb_associate_with",
-    "prompt": "associate __",
-    "answer": [
-      "with"
-    ],
-    "group": "verbs",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "ассоциировать (с/чем-то)",
-    "ru_note": "",
-    "context_ru": "с/взаимодействие или оценка результата (зависит от выражения)",
-    "example_blank": "I associate it __ childhood."
+    "context_ru": "причина для",
+    "example_blank": "a reason __ concern"
   },
   {
-    "id": "verb_cooperate_with",
-    "prompt": "cooperate __",
-    "answer": [
-      "with"
-    ],
-    "group": "verbs",
-    "note": "",
-    "tags": [],
-    "ru": "сотрудничать (с/чем-то)",
-    "ru_note": "",
-    "context_ru": "с/взаимодействие или оценка результата (зависит от выражения)",
-    "example_blank": "We cooperated __ the police."
-  },
-  {
-    "id": "verb_deal_with",
-    "prompt": "deal __",
-    "answer": [
-      "with"
-    ],
-    "group": "verbs",
-    "note": "",
-    "tags": [],
-    "ru": "иметь дело / разбираться (с/чем-то)",
-    "ru_note": "",
-    "context_ru": "с/взаимодействие или оценка результата (зависит от выражения)",
-    "example_blank": "We need to deal __ this problem."
-  },
-  {
-    "id": "verb_provide_with",
-    "prompt": "provide sb __ sth",
-    "answer": [
-      "with"
-    ],
-    "group": "verbs",
-    "note": "",
-    "tags": [],
-    "ru": "provide sb (с/чем-то)",
-    "ru_note": "",
-    "context_ru": "с/взаимодействие или оценка результата (зависит от выражения)",
-    "example_blank": "provide you __ the result."
-  },
-  {
-    "id": "verb_supply_with",
-    "prompt": "supply sb __ sth",
-    "answer": [
-      "with"
-    ],
-    "group": "verbs",
-    "note": "",
-    "tags": [],
-    "ru": "supply sb (с/чем-то)",
-    "ru_note": "",
-    "context_ru": "с/взаимодействие или оценка результата (зависит от выражения)",
-    "example_blank": "supply you __ the result."
-  },
-  {
-    "id": "verb_fill_with",
-    "prompt": "fill sth __ sth",
-    "answer": [
-      "with"
-    ],
-    "group": "verbs",
-    "note": "",
-    "tags": [],
-    "ru": "fill sth (с/чем-то)",
-    "ru_note": "",
-    "context_ru": "с/взаимодействие или оценка результата (зависит от выражения)",
-    "example_blank": "Fill the glass __ water."
-  },
-  {
-    "id": "verb_provide_to",
-    "prompt": "provide sth __ sb",
+    "id": "a_threat_sb__to__546a808e",
+    "prompt": "a threat __ sb",
     "answer": [
       "to"
     ],
-    "group": "verbs",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "provide sth (к/в/для)",
-    "ru_note": "",
-    "context_ru": "направление/адресат/реакция",
-    "example_blank": "provide you __ you."
+    "context_ru": "угроза кому‑то",
+    "example_blank": "a threat __ public safety"
   },
   {
-    "id": "verb_supply_to",
-    "prompt": "supply sth __ sb",
+    "id": "accuse_sb_sth__of__8b53b4d7",
+    "prompt": "accuse sb __ sth",
     "answer": [
-      "to"
+      "of"
     ],
-    "group": "verbs",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "supply sth (к/в/для)",
-    "ru_note": "",
-    "context_ru": "направление/адресат/реакция",
-    "example_blank": "supply you __ you."
+    "context_ru": "обвинять в",
+    "example_blank": "Accuse him __ lying."
   },
   {
-    "id": "verb_concentrate_on",
-    "prompt": "concentrate __ sth",
+    "id": "arrest_sb_sth__for__bf5aeee8",
+    "prompt": "arrest sb __ sth",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "арестовать за",
+    "example_blank": "Arrested __ theft."
+  },
+  {
+    "id": "blame_sb_sth__for__467e95a6",
+    "prompt": "blame sb __ sth",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "винить за",
+    "example_blank": "Blame her __ the mistake."
+  },
+  {
+    "id": "put_the_blame_sb__on__d4b215d4",
+    "prompt": "put the blame __ sb",
     "answer": [
       "on"
     ],
-    "group": "verbs",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "концентрироваться (о/по теме)",
-    "ru_note": "",
-    "context_ru": "фокус/внимание: on",
-    "example_blank": "Concentrate __ the task."
+    "context_ru": "переложить вину на",
+    "example_blank": "Put the blame __ me."
   },
   {
-    "id": "verb_congratulate_on",
-    "prompt": "congratulate sb __ sth",
+    "id": "gettake_the_blame_sth__for__f81a8c1e",
+    "prompt": "get/take the blame __ sth",
     "answer": [
-      "on"
+      "for"
     ],
-    "group": "verbs",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "congratulate sb (о/по теме)",
-    "ru_note": "",
-    "context_ru": "поздравление: congratulate on",
-    "example_blank": "I congratulated her __ her promotion."
+    "context_ru": "взять вину за",
+    "example_blank": "Take the blame __ it."
   },
   {
-    "id": "verb_include_in",
-    "prompt": "include sth __ (a list)",
-    "answer": [
-      "in"
-    ],
-    "group": "verbs",
-    "note": "",
-    "tags": [],
-    "ru": "include sth (сфера/область)",
-    "ru_note": "",
-    "context_ru": "сфера/область/вовлечённость",
-    "example_blank": "Please include it __ the list."
-  },
-  {
-    "id": "verb_involve_in",
-    "prompt": "involve sb __ sth",
-    "answer": [
-      "in"
-    ],
-    "group": "verbs",
-    "note": "",
-    "tags": [],
-    "ru": "involve sb (сфера/область)",
-    "ru_note": "",
-    "context_ru": "сфера/область/вовлечённость",
-    "example_blank": "Don’t involve me __ this."
-  },
-  {
-    "id": "verb_succeed_in",
-    "prompt": "succeed __ (doing sth)",
-    "answer": [
-      "in"
-    ],
-    "group": "verbs",
-    "note": "IN = succeed in doing sth",
-    "tags": [],
-    "ru": "добиться успеха (сфера/область)",
-    "ru_note": "IN = succeed in doing sth",
-    "context_ru": "сфера/область/вовлечённость",
-    "example_blank": "succeed __ finance."
-  },
-  {
-    "id": "verb_succeed_at",
-    "prompt": "succeed __ (a task/skill)",
-    "answer": [
-      "at"
-    ],
-    "group": "verbs",
-    "note": "AT = succeed at a task/skill",
-    "tags": [],
-    "ru": "добиться успеха (навык/занятие)",
-    "ru_note": "AT = succeed at a task/skill",
-    "context_ru": "навык/умение/занятие",
-    "example_blank": "succeed __ maths."
-  },
-  {
-    "id": "verb_know_about",
-    "prompt": "know __ sth",
+    "id": "dream__about__2a00940f",
+    "prompt": "dream __",
     "answer": [
       "about"
     ],
-    "group": "verbs",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "знать (о/по поводу)",
-    "ru_note": "",
-    "context_ru": "о/по поводу темы/ситуации",
-    "example_blank": "Do you know __ this topic?"
+    "context_ru": "мечтать/видеть сон о",
+    "example_blank": "Dream __ flying."
   },
   {
-    "id": "verb_praise_for",
-    "prompt": "praise sb __ sth",
+    "id": "escape__from__b1b83fcd",
+    "prompt": "escape __",
     "answer": [
-      "for"
+      "from"
     ],
-    "group": "verbs",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "praise sb (за/для)",
-    "ru_note": "",
-    "context_ru": "",
-    "example_blank": "They praised him __ his courage."
+    "context_ru": "сбежать/уйти от",
+    "example_blank": "Escape __ prison."
   },
   {
-    "id": "conf_fight_with",
+    "id": "fight_sb__with__aef5e073",
     "prompt": "fight __ sb",
     "answer": [
       "with"
     ],
-    "group": "confusers",
-    "note": "WITH = fight with someone",
-    "tags": [
-      "confuser:fight_with_about"
-    ],
-    "ru": "ссориться/драться (с/чем-то)",
-    "ru_note": "WITH = fight with someone",
-    "context_ru": "с/взаимодействие или оценка результата (зависит от выражения)",
-    "example_blank": "fight __ you."
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "ссориться/драться С кем‑то",
+    "example_blank": "They fought __ each other."
   },
   {
-    "id": "conf_fight_about",
+    "id": "fight_sth__about__f0db3626",
     "prompt": "fight __ sth",
     "answer": [
       "about"
     ],
-    "group": "confusers",
-    "note": "ABOUT = fight about something",
-    "tags": [
-      "confuser:fight_with_about"
-    ],
-    "ru": "ссориться/драться (о/по поводу)",
-    "ru_note": "ABOUT = fight about something",
-    "context_ru": "о/по поводу темы/ситуации",
-    "example_blank": "fight __ the news."
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "ссориться ИЗ‑ЗА чего‑то",
+    "example_blank": "They fought __ money."
   },
   {
-    "id": "conf_apply_to",
-    "prompt": "apply __ (a person/institution)",
+    "id": "forget_sth__about__050bee96",
+    "prompt": "forget __ sth",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "забыть о",
+    "example_blank": "Forget __ it."
+  },
+  {
+    "id": "lie_sb__to__91d376b9",
+    "prompt": "lie __ sb",
     "answer": [
       "to"
     ],
-    "group": "confusers",
-    "note": "TO = apply to a person/institution",
-    "tags": [
-      "confuser:apply_to_for"
-    ],
-    "ru": "подавать (заявку) (к/в/для)",
-    "ru_note": "TO = apply to a person/institution",
-    "context_ru": "apply to = обратиться в учреждение; apply for = подать на вещь/должность",
-    "example_blank": "I applied __ the university."
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "соврать КОМУ‑то",
+    "example_blank": "He lied __ me."
   },
   {
-    "id": "conf_apply_for",
-    "prompt": "apply __ (a job/visa/thing)",
+    "id": "lie_sth__about__491d961d",
+    "prompt": "lie __ sth",
     "answer": [
-      "for"
+      "about"
     ],
-    "group": "confusers",
-    "note": "FOR = apply for a job/visa/thing",
-    "tags": [
-      "confuser:apply_to_for"
-    ],
-    "ru": "подавать (заявку) (за/для)",
-    "ru_note": "FOR = apply for a job/visa/thing",
-    "context_ru": "apply to = обратиться в учреждение; apply for = подать на вещь/должность",
-    "example_blank": "I applied __ a visa."
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "соврать О чём‑то",
+    "example_blank": "He lied __ his age."
   },
   {
-    "id": "conf_known_as",
-    "prompt": "known __",
+    "id": "sentence_sb__to__19e527b4",
+    "prompt": "sentence sb __",
     "answer": [
-      "as"
+      "to"
     ],
-    "group": "confusers",
-    "note": "AS = known as a name/role",
-    "tags": [
-      "confuser:known_as_famous_for"
-    ],
-    "ru": "known (как/в качестве)",
-    "ru_note": "AS = known as a name/role",
-    "context_ru": "название/роль: «известен как»",
-    "example_blank": "He’s known __ “The Boss”."
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "приговорить к",
+    "example_blank": "Sentence him __ prison."
   },
   {
-    "id": "conf_famous_for",
-    "prompt": "famous __",
+    "id": "harmful__to__cd6e0742",
+    "prompt": "harmful __",
     "answer": [
-      "for"
+      "to"
     ],
-    "group": "confusers",
-    "note": "FOR = famous for something",
-    "tags": [
-      "confuser:known_as_famous_for"
-    ],
-    "ru": "знаменит(а) (тем, что) (за/для)",
-    "ru_note": "FOR = famous for something",
-    "context_ru": "причина славы: «знаменит тем, что»",
-    "example_blank": "It’s famous __ its food."
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "вреден для",
+    "example_blank": "Harmful __ health."
   },
   {
-    "id": "conf_protection_from",
-    "prompt": "protection __ (harm/cold/etc.)",
+    "id": "tired__of__e02bbf7b",
+    "prompt": "tired __",
+    "answer": [
+      "of"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "устал от / надоело",
+    "example_blank": "Tired __ waiting."
+  },
+  {
+    "id": "weak__in__9d3528dc",
+    "prompt": "weak __",
+    "answer": [
+      "in"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "слаб в",
+    "example_blank": "Weak __ maths."
+  },
+  {
+    "id": "wrong__about__888df5f8",
+    "prompt": "wrong __",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "не прав насчёт",
+    "example_blank": "Wrong __ the date."
+  },
+  {
+    "id": "mad_sb__at__dbd435ee",
+    "prompt": "mad __ sb",
+    "answer": [
+      "at"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "злой на человека",
+    "example_blank": "Mad __ him."
+  },
+  {
+    "id": "mad_sbsth__about__f6309417",
+    "prompt": "mad __ sb/sth",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "«помешан» / очень любит",
+    "example_blank": "Mad __ football."
+  },
+  {
+    "id": "safe__from__4ae24294",
+    "prompt": "safe __",
     "answer": [
       "from"
     ],
-    "group": "confusers",
-    "note": "FROM = protection from something",
-    "tags": [
-      "confuser:protection_from_against"
-    ],
-    "ru": "protection (от)",
-    "ru_note": "FROM = protection from something",
-    "context_ru": "защита: from = от вреда/влияния; against = от атаки/угрозы",
-    "example_blank": "Protection __ the cold."
-  },
-  {
-    "id": "conf_protection_against",
-    "prompt": "protection __ (attack/fraud/etc.)",
-    "answer": [
-      "against"
-    ],
-    "group": "confusers",
-    "note": "AGAINST = protection against something",
-    "tags": [
-      "confuser:protection_from_against"
-    ],
-    "ru": "protection (против)",
-    "ru_note": "AGAINST = protection against something",
-    "context_ru": "защита: from = от вреда/влияния; against = от атаки/угрозы",
-    "example_blank": "Protection __ fraud."
-  },
-  {
-    "id": "into_look_into",
-    "prompt": "look __ (a problem)",
-    "answer": [
-      "into"
-    ],
-    "group": "into_set",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "разобраться/проверить (в/внутрь)",
-    "ru_note": "устойчивое «into»: look into / get into / run into / turn into и т.д.",
-    "context_ru": "устойч. сочетание: into = «в/вляпаться/превратить(ся)»",
-    "example_blank": "We’ll look __ the problem."
+    "context_ru": "в безопасности от",
+    "example_blank": "Safe __ harm."
   },
   {
-    "id": "into_run_into",
-    "prompt": "run __ (an old friend / a problem)",
+    "id": "feel_sorry_sb_sympathetic__for__4e1152a8",
+    "prompt": "(feel) sorry __ sb (=sympathetic)",
     "answer": [
-      "into"
+      "for"
     ],
-    "group": "into_set",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "случайно столкнуться (в/внутрь)",
-    "ru_note": "устойчивое «into»: look into / get into / run into / turn into и т.д.",
-    "context_ru": "устойч. сочетание: into = «в/вляпаться/превратить(ся)»",
-    "example_blank": "I ran __ an old friend yesterday."
+    "context_ru": "жаль кого‑то",
+    "example_blank": "I feel sorry __ her."
   },
   {
-    "id": "into_get_into",
-    "prompt": "get __ trouble",
+    "id": "feel_sorry_sth_regret__about__ec43f80b",
+    "prompt": "(feel) sorry __ sth (=regret)",
     "answer": [
-      "into"
+      "about"
     ],
-    "group": "into_set",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "вляпаться/попасть (в/внутрь)",
-    "ru_note": "устойчивое «into»: look into / get into / run into / turn into и т.д.",
-    "context_ru": "устойч. сочетание: into = «в/вляпаться/превратить(ся)»",
-    "example_blank": "He got __ trouble again."
+    "context_ru": "жаль/извиняюсь за",
+    "example_blank": "I'm sorry __ the mess."
   },
   {
-    "id": "into_break_into",
-    "prompt": "break __ (a house)",
+    "id": "damage__to__26adebe0",
+    "prompt": "damage __",
     "answer": [
-      "into"
+      "to"
     ],
-    "group": "into_set",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "вломиться (в/внутрь)",
-    "ru_note": "устойчивое «into»: look into / get into / run into / turn into и т.д.",
-    "context_ru": "устойч. сочетание: into = «в/вляпаться/превратить(ся)»",
-    "example_blank": "Someone broke __ the house."
+    "context_ru": "ущерб чему‑то",
+    "example_blank": "damage __ property"
   },
   {
-    "id": "into_talk_into",
-    "prompt": "talk sb __ doing sth",
-    "answer": [
-      "into"
-    ],
-    "group": "into_set",
-    "note": "",
-    "tags": [],
-    "ru": "talk sb (в/внутрь)",
-    "ru_note": "устойчивое «into»: look into / get into / run into / turn into и т.д.",
-    "context_ru": "устойч. сочетание: into = «в/вляпаться/превратить(ся)»",
-    "example_blank": "She talked me __ going."
-  },
-  {
-    "id": "into_turn_into",
-    "prompt": "turn __ (ice / something else)",
-    "answer": [
-      "into"
-    ],
-    "group": "into_set",
-    "note": "",
-    "tags": [],
-    "ru": "превратиться/превратить (в/внутрь)",
-    "ru_note": "устойчивое «into»: look into / get into / run into / turn into и т.д.",
-    "context_ru": "устойч. сочетание: into = «в/вляпаться/превратить(ся)»",
-    "example_blank": "Water turns __ ice."
-  },
-  {
-    "id": "into_translate_into",
-    "prompt": "translate __ (English / another language)",
-    "answer": [
-      "into"
-    ],
-    "group": "into_set",
-    "note": "",
-    "tags": [],
-    "ru": "перевести (в/внутрь)",
-    "ru_note": "устойчивое «into»: look into / get into / run into / turn into и т.д.",
-    "context_ru": "устойч. сочетание: into = «в/вляпаться/превратить(ся)»",
-    "example_blank": "Translate it __ English."
-  },
-  {
-    "id": "into_be_into",
-    "prompt": "be __ (music / a hobby)",
-    "answer": [
-      "into"
-    ],
-    "group": "into_set",
-    "note": "",
-    "tags": [],
-    "ru": "увлекаться (в/внутрь)",
-    "ru_note": "устойчивое «into»: look into / get into / run into / turn into и т.д.",
-    "context_ru": "устойч. сочетание: into = «в/вляпаться/превратить(ся)»",
-    "example_blank": "I’m __ photography."
-  },
-  {
-    "id": "out_of_control",
-    "prompt": "out __ control",
-    "answer": [
-      "of"
-    ],
-    "group": "out_of_set",
-    "note": "forms “out of …”",
-    "tags": [],
-    "ru": "вне / без",
-    "ru_note": "forms “out of …”",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "It’s out __ control."
-  },
-  {
-    "id": "out_of_money",
-    "prompt": "out __ money",
-    "answer": [
-      "of"
-    ],
-    "group": "out_of_set",
-    "note": "forms “out of …”",
-    "tags": [],
-    "ru": "вне / без",
-    "ru_note": "forms “out of …”",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "We’re out __ money."
-  },
-  {
-    "id": "out_of_time",
-    "prompt": "out __ time",
-    "answer": [
-      "of"
-    ],
-    "group": "out_of_set",
-    "note": "forms “out of …”",
-    "tags": [],
-    "ru": "вне / без",
-    "ru_note": "forms “out of …”",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "I’m out __ time."
-  },
-  {
-    "id": "out_of_date",
-    "prompt": "out __ date",
-    "answer": [
-      "of"
-    ],
-    "group": "out_of_set",
-    "note": "forms “out of …”",
-    "tags": [],
-    "ru": "вне / без",
-    "ru_note": "forms “out of …”",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "This passport is out __ date."
-  },
-  {
-    "id": "out_of_order",
-    "prompt": "out __ order",
-    "answer": [
-      "of"
-    ],
-    "group": "out_of_set",
-    "note": "forms “out of …”",
-    "tags": [],
-    "ru": "вне / без",
-    "ru_note": "forms “out of …”",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "The lift is out __ order."
-  },
-  {
-    "id": "out_of_breath",
-    "prompt": "out __ breath",
-    "answer": [
-      "of"
-    ],
-    "group": "out_of_set",
-    "note": "forms “out of …”",
-    "tags": [],
-    "ru": "вне / без",
-    "ru_note": "forms “out of …”",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "I’m out __ breath."
-  },
-  {
-    "id": "out_of_luck",
-    "prompt": "out __ luck",
-    "answer": [
-      "of"
-    ],
-    "group": "out_of_set",
-    "note": "forms “out of …”",
-    "tags": [],
-    "ru": "вне / без",
-    "ru_note": "forms “out of …”",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "You’re out __ luck."
-  },
-  {
-    "id": "out_of_practice",
-    "prompt": "out __ practice",
-    "answer": [
-      "of"
-    ],
-    "group": "out_of_set",
-    "note": "forms “out of …”",
-    "tags": [],
-    "ru": "вне / без",
-    "ru_note": "forms “out of …”",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "I’m out __ practice."
-  },
-  {
-    "id": "out_of_get_out_of",
-    "prompt": "get __ (doing sth)",
-    "answer": [
-      "out of"
-    ],
-    "group": "out_of_set",
-    "note": "",
-    "tags": [],
-    "ru": "вляпаться/попасть (из/вне/без)",
-    "ru_note": "устойчивое «out of»: get out of doing / talk sb out of doing.",
-    "context_ru": "устойч. сочетание: out of = «из/вне/без»",
-    "example_blank": "He got __ paying."
-  },
-  {
-    "id": "out_of_talk_out_of",
-    "prompt": "talk sb __ doing sth",
-    "answer": [
-      "out of"
-    ],
-    "group": "out_of_set",
-    "note": "",
-    "tags": [],
-    "ru": "talk sb (из/вне/без)",
-    "ru_note": "устойчивое «out of»: get out of doing / talk sb out of doing.",
-    "context_ru": "устойч. сочетание: out of = «из/вне/без»",
-    "example_blank": "She talked me __ it."
-  },
-  {
-    "id": "as_known_as",
-    "prompt": "known __ (a name/role)",
-    "answer": [
-      "as"
-    ],
-    "group": "as_set",
-    "note": "",
-    "tags": [],
-    "ru": "known (как/в качестве)",
-    "ru_note": "«as» = как/в качестве (роль/название).",
-    "context_ru": "название/роль: «известен как»",
-    "example_blank": "He is known __ Mike."
-  },
-  {
-    "id": "as_work_as",
-    "prompt": "work __ (a teacher)",
-    "answer": [
-      "as"
-    ],
-    "group": "as_set",
-    "note": "",
-    "tags": [],
-    "ru": "работать (как/в качестве)",
-    "ru_note": "«as» = как/в качестве (роль/название).",
-    "context_ru": "роль/название: as = «как/в качестве»",
-    "example_blank": "She works __ a teacher."
-  },
-  {
-    "id": "as_serve_as",
-    "prompt": "serve __ (an example)",
-    "answer": [
-      "as"
-    ],
-    "group": "as_set",
-    "note": "",
-    "tags": [],
-    "ru": "служить/выступать (как/в качестве)",
-    "ru_note": "«as» = как/в качестве (роль/название).",
-    "context_ru": "роль/название: as = «как/в качестве»",
-    "example_blank": "This serves __ an example."
-  },
-  {
-    "id": "as_regard_as",
-    "prompt": "regard sb __ (a friend)",
-    "answer": [
-      "as"
-    ],
-    "group": "as_set",
-    "note": "",
-    "tags": [],
-    "ru": "regard sb (как/в качестве)",
-    "ru_note": "«as» = как/в качестве (роль/название).",
-    "context_ru": "роль/название: as = «как/в качестве»",
-    "example_blank": "I regard her __ a friend."
-  },
-  {
-    "id": "as_think_of_as",
-    "prompt": "think of sb __ (a mentor)",
-    "answer": [
-      "as"
-    ],
-    "group": "as_set",
-    "note": "",
-    "tags": [],
-    "ru": "think of sb (как/в качестве)",
-    "ru_note": "«as» = как/в качестве (роль/название).",
-    "context_ru": "роль/название: as = «как/в качестве»",
-    "example_blank": "I think of him __ a mentor."
-  },
-  {
-    "id": "as_refer_to_as",
-    "prompt": "refer to sb __ (the lead)",
-    "answer": [
-      "as"
-    ],
-    "group": "as_set",
-    "note": "",
-    "tags": [],
-    "ru": "refer to sb (как/в качестве)",
-    "ru_note": "«as» = как/в качестве (роль/название).",
-    "context_ru": "роль/название: as = «как/в качестве»",
-    "example_blank": "People refer to her __ the lead."
-  },
-  {
-    "id": "as_treat_as",
-    "prompt": "treat sb __ (an equal)",
-    "answer": [
-      "as"
-    ],
-    "group": "as_set",
-    "note": "",
-    "tags": [],
-    "ru": "treat sb (как/в качестве)",
-    "ru_note": "«as» = как/в качестве (роль/название).",
-    "context_ru": "роль/название: as = «как/в качестве»",
-    "example_blank": "Treat me __ an equal."
-  },
-  {
-    "id": "as_qualify_as",
-    "prompt": "qualify __ (a nurse)",
-    "answer": [
-      "as"
-    ],
-    "group": "as_set",
-    "note": "",
-    "tags": [],
-    "ru": "квалифицироваться (как/в качестве)",
-    "ru_note": "«as» = как/в качестве (роль/название).",
-    "context_ru": "роль/название: as = «как/в качестве»",
-    "example_blank": "She qualified __ a nurse."
-  },
-  {
-    "id": "as_pass_as",
-    "prompt": "pass __ (a local)",
-    "answer": [
-      "as"
-    ],
-    "group": "as_set",
-    "note": "",
-    "tags": [],
-    "ru": "сойти за (как/в качестве)",
-    "ru_note": "«as» = как/в качестве (роль/название).",
-    "context_ru": "роль/название: as = «как/в качестве»",
-    "example_blank": "He can pass __ a local."
-  },
-  {
-    "id": "adj_excellent_at",
-    "prompt": "excellent __",
-    "answer": [
-      "at"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "отлично (в чём-то) (навык/занятие)",
-    "ru_note": "",
-    "context_ru": "навык/умение/занятие",
-    "example_blank": "I’m excellent __ maths."
-  },
-  {
-    "id": "adj_good_at",
-    "prompt": "good __",
-    "answer": [
-      "at"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "хорош(а) (в чём-то) (навык/занятие)",
-    "ru_note": "",
-    "context_ru": "навык/умение/занятие",
-    "example_blank": "I’m good __ maths."
-  },
-  {
-    "id": "adj_bad_at",
-    "prompt": "bad __",
-    "answer": [
-      "at"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "плох(а) (в чём-то) (навык/занятие)",
-    "ru_note": "",
-    "context_ru": "навык/умение/занятие",
-    "example_blank": "I’m bad __ maths."
-  },
-  {
-    "id": "adj_experienced_in",
-    "prompt": "experienced __",
-    "answer": [
-      "in"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "опытный/опытна (в сфере) (сфера/область)",
-    "ru_note": "",
-    "context_ru": "сфера/область/вовлечённость",
-    "example_blank": "I’m experienced __ finance."
-  },
-  {
-    "id": "adj_interested_in",
-    "prompt": "interested __",
-    "answer": [
-      "in"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "заинтересован(а) (в) (сфера/область)",
-    "ru_note": "",
-    "context_ru": "сфера/область/вовлечённость",
-    "example_blank": "I’m interested __ finance."
-  },
-  {
-    "id": "adj_successful_in",
-    "prompt": "successful __",
-    "answer": [
-      "in"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "успешен/успешна (в сфере) (сфера/область)",
-    "ru_note": "",
-    "context_ru": "сфера/область/вовлечённость",
-    "example_blank": "I’m successful __ finance."
-  },
-  {
-    "id": "adj_keen_on",
-    "prompt": "keen __",
+    "id": "shame_sb__on__a92d51a9",
+    "prompt": "shame __ sb",
     "answer": [
       "on"
     ],
-    "group": "adjectives",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "увлечён(а) / любит (о/по теме)",
-    "ru_note": "",
-    "context_ru": "на/о (зависит от выражения)",
-    "example_blank": "I’m keen __ the plan."
+    "context_ru": "стыд на ком‑то",
+    "example_blank": "Shame __ you."
   },
   {
-    "id": "adj_dependent_on",
+    "id": "shelter__from__0129e80d",
+    "prompt": "shelter __",
+    "answer": [
+      "from"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "укрытие от",
+    "example_blank": "shelter __ the rain"
+  },
+  {
+    "id": "beware__of__188499d1",
+    "prompt": "beware __",
+    "answer": [
+      "of"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "остерегаться",
+    "example_blank": "Beware __ dogs."
+  },
+  {
+    "id": "head__for__e9a9ec79",
+    "prompt": "head __",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "направляться к",
+    "example_blank": "Head __ home."
+  },
+  {
+    "id": "lean__on__704428b6",
+    "prompt": "lean __",
+    "answer": [
+      "on"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "опираться на",
+    "example_blank": "Lean __ the wall."
+  },
+  {
+    "id": "protect__from__36bab2c6",
+    "prompt": "protect __",
+    "answer": [
+      "from"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "защищать от",
+    "example_blank": "Protect it __ damage."
+  },
+  {
+    "id": "punish_sb__for__5cd4731d",
+    "prompt": "punish sb __",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "наказать за",
+    "example_blank": "Punish him __ cheating."
+  },
+  {
+    "id": "recover__from__563f1ede",
+    "prompt": "recover __",
+    "answer": [
+      "from"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "восстановиться после",
+    "example_blank": "Recover __ illness."
+  },
+  {
+    "id": "reduce_sth__by__cbd5690e",
+    "prompt": "reduce sth __",
+    "answer": [
+      "by"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "уменьшить на (величину)",
+    "example_blank": "Reduce it __ 10%."
+  },
+  {
+    "id": "rescue_sb__from__cc56a938",
+    "prompt": "rescue sb __",
+    "answer": [
+      "from"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "спасти из/от",
+    "example_blank": "Rescue them __ danger."
+  },
+  {
+    "id": "save__from__ab0517a7",
+    "prompt": "save __",
+    "answer": [
+      "from"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "спасти от",
+    "example_blank": "Save him __ death."
+  },
+  {
+    "id": "steal__from__de899092",
+    "prompt": "steal __",
+    "answer": [
+      "from"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "украсть у",
+    "example_blank": "Steal it __ me."
+  },
+  {
+    "id": "suffer__from__6b0f266f",
+    "prompt": "suffer __",
+    "answer": [
+      "from"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "страдать от",
+    "example_blank": "Suffer __ headaches."
+  },
+  {
+    "id": "anxious_sth__about__7f8f7851",
+    "prompt": "anxious __ sth",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "тревожится из‑за",
+    "example_blank": "Anxious __ the exam."
+  },
+  {
+    "id": "concerned__about__6208ace2",
+    "prompt": "concerned __",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "обеспокоен насчёт",
+    "example_blank": "Concerned __ safety."
+  },
+  {
+    "id": "late__for__8987485c",
+    "prompt": "late __",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "опаздывает на",
+    "example_blank": "Late __ work."
+  },
+  {
+    "id": "nervous__about__2659463b",
+    "prompt": "nervous __",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "нервничает насчёт",
+    "example_blank": "Nervous __ the interview."
+  },
+  {
+    "id": "worried__about__48c69124",
+    "prompt": "worried __",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "переживает насчёт",
+    "example_blank": "Worried __ you."
+  },
+  {
+    "id": "a_complaint__about__9f95ad53",
+    "prompt": "a complaint __",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "жалоба на",
+    "example_blank": "a complaint __ noise"
+  },
+  {
+    "id": "disagree_sb__with__3e931075",
+    "prompt": "(dis)agree __ sb",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "(не)соглашаться с человеком",
+    "example_blank": "Agree __ her."
+  },
+  {
+    "id": "disagree_a_subject__about__2e01c80f",
+    "prompt": "(dis)agree __ a subject",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "(не)соглашаться насчёт темы",
+    "example_blank": "Agree __ politics."
+  },
+  {
+    "id": "disagree_an_action__on__f98f53b9",
+    "prompt": "(dis)agree __ an action",
+    "answer": [
+      "on"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "(не)соглашаться насчёт действия/плана",
+    "example_blank": "Agree __ doing it."
+  },
+  {
+    "id": "apply_sban_institution__to__76c8d029",
+    "prompt": "apply __ sb/an institution",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "подать/обратиться В учреждение/к органу",
+    "example_blank": "Apply __ the embassy."
+  },
+  {
+    "id": "apply_sth__for__a173720e",
+    "prompt": "apply __ sth",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "подать заявку НА (виза/работа/разрешение)",
+    "example_blank": "Apply __ a visa."
+  },
+  {
+    "id": "argue_sb__with__ef438c79",
+    "prompt": "argue __ sb",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "спорить С кем‑то",
+    "example_blank": "I argued __ him."
+  },
+  {
+    "id": "argue_sth__about__cb71d345",
+    "prompt": "argue __ sth",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "спорить О чём‑то",
+    "example_blank": "We argued __ money."
+  },
+  {
+    "id": "ask__for__46d2ad5a",
+    "prompt": "ask __",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "просить / спрашивать о",
+    "example_blank": "Ask __ help."
+  },
+  {
+    "id": "beg__for__57ff71fc",
+    "prompt": "beg __",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "умолять о",
+    "example_blank": "Beg __ forgiveness."
+  },
+  {
+    "id": "complain_sb__to__46f79b0a",
+    "prompt": "complain __ sb",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "жаловаться КОМУ‑то",
+    "example_blank": "Complain __ the manager."
+  },
+  {
+    "id": "complain_sth__about__d758f523",
+    "prompt": "complain __ sth",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "жаловаться НА/о проблеме",
+    "example_blank": "Complain __ the service."
+  },
+  {
+    "id": "complain_sth__about__f104fe9c",
+    "prompt": "complain __ sth",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "жаловаться на (в целом)",
+    "example_blank": "Complain __ the heat."
+  },
+  {
+    "id": "criticise_sb_sth__for__95a96ed9",
+    "prompt": "criticise sb __ sth",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "критиковать за",
+    "example_blank": "Criticise her __ being late."
+  },
+  {
+    "id": "discourage_sb_doing_sth__from__8b85c643",
+    "prompt": "discourage sb __ doing sth",
+    "answer": [
+      "from"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "отговорить от",
+    "example_blank": "Discourage him __ going."
+  },
+  {
+    "id": "object_sbsth__to__98b74d91",
+    "prompt": "object __ sb/sth",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "возражать против",
+    "example_blank": "Object __ the plan."
+  },
+  {
+    "id": "quarrel_sb__with__c872daa3",
+    "prompt": "quarrel __ sb",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "ссориться с",
+    "example_blank": "Quarrel __ my sister."
+  },
+  {
+    "id": "quarrel_sth__about__c68940cf",
+    "prompt": "quarrel __ sth",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "ссориться из‑за",
+    "example_blank": "Quarrel __ money."
+  },
+  {
+    "id": "speak_sb__to__b58fe103",
+    "prompt": "speak __ sb",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "говорить с",
+    "example_blank": "Speak __ him."
+  },
+  {
+    "id": "talk_sb__to__c286184f",
+    "prompt": "talk __ sb",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "разговаривать с",
+    "example_blank": "Talk __ her."
+  },
+  {
+    "id": "talk_sth__about__25beda10",
+    "prompt": "talk __ sth",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "говорить о",
+    "example_blank": "Talk __ the problem."
+  },
+  {
+    "id": "thank_sb_sth__for__c3e6f198",
+    "prompt": "thank sb __ sth",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "благодарить за",
+    "example_blank": "Thank you __ your help."
+  },
+  {
+    "id": "wander__around__c72433f5",
+    "prompt": "wander __",
+    "answer": [
+      "around"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "бродить где‑то",
+    "example_blank": "Wander __ the city."
+  },
+  {
+    "id": "worry_sbsth__about__fd68fa44",
+    "prompt": "worry __ sb/sth",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "переживать о",
+    "example_blank": "Worry __ them."
+  },
+  {
+    "id": "afraid__of__643da6d6",
+    "prompt": "afraid __",
+    "answer": [
+      "of"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "боится",
+    "example_blank": "Afraid __ spiders."
+  },
+  {
+    "id": "incapable__of__6cf844e5",
+    "prompt": "(in)capable __",
+    "answer": [
+      "of"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "(не)способен на",
+    "example_blank": "Capable __ doing it."
+  },
+  {
+    "id": "confident__of__080c9646",
+    "prompt": "confident __",
+    "answer": [
+      "of"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "уверен в",
+    "example_blank": "Confident __ success."
+  },
+  {
+    "id": "be_free_sth__from__b3c70d14",
+    "prompt": "(be) free __ sth",
+    "answer": [
+      "from"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "свободен от",
+    "example_blank": "Free __ charge."
+  },
+  {
+    "id": "handy__for__423d7c2d",
+    "prompt": "handy __",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "удобный/умелый с",
+    "example_blank": "Handy __ tools."
+  },
+  {
+    "id": "polite__to__abd25ccc",
+    "prompt": "polite __",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "вежливый с/по отношению к",
+    "example_blank": "Polite __ strangers."
+  },
+  {
+    "id": "upset__about__5965e492",
+    "prompt": "upset __",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "расстроен из‑за",
+    "example_blank": "Upset __ the news."
+  },
+  {
+    "id": "give_advice__on__57cf2828",
+    "prompt": "(give) advice __",
+    "answer": [
+      "on"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "дать совет по",
+    "example_blank": "Advice __ budgeting."
+  },
+  {
+    "id": "a_hope__of__1738c9b0",
+    "prompt": "a hope __",
+    "answer": [
+      "of"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "надежда на",
+    "example_blank": "a hope __ success"
+  },
+  {
+    "id": "a_reputation__for__7265e49c",
+    "prompt": "a reputation __",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "репутация за",
+    "example_blank": "a reputation __ honesty"
+  },
+  {
+    "id": "a_result__of__4c90c2ca",
+    "prompt": "a result __",
+    "answer": [
+      "of"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "результат чего‑то",
+    "example_blank": "a result __ the vote"
+  },
+  {
+    "id": "a_specialist__in__b0345927",
+    "prompt": "a specialist __",
+    "answer": [
+      "in"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "специалист в",
+    "example_blank": "a specialist __ cardiology"
+  },
+  {
+    "id": "protection__from__75543c89",
+    "prompt": "protection __",
+    "answer": [
+      "from"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "защита от",
+    "example_blank": "protection __ fire"
+  },
+  {
+    "id": "advise_sb_sth__on__76a2a784",
+    "prompt": "advise sb __ sth",
+    "answer": [
+      "on"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "посоветовать по",
+    "example_blank": "Advise me __ this."
+  },
+  {
+    "id": "choose__from__9d19c791",
+    "prompt": "choose __",
+    "answer": [
+      "from"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "выбирать из",
+    "example_blank": "Choose __ the menu."
+  },
+  {
+    "id": "collaborate__with__7b9f7ee1",
+    "prompt": "collaborate __",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "сотрудничать с",
+    "example_blank": "Collaborate __ them."
+  },
+  {
+    "id": "communicate__with__878569a9",
+    "prompt": "communicate __",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "общаться с",
+    "example_blank": "Communicate __ clients."
+  },
+  {
+    "id": "connect__to__bc7b90e0",
+    "prompt": "connect __",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "подключиться к",
+    "example_blank": "Connect __ Wi‑Fi."
+  },
+  {
+    "id": "cope__with__79843ce0",
+    "prompt": "cope __",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "справляться с",
+    "example_blank": "Cope __ stress."
+  },
+  {
+    "id": "explain_sth_sb__to__fa03ea0b",
+    "prompt": "explain sth __ sb",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "объяснить кому‑то",
+    "example_blank": "Explain it __ me."
+  },
+  {
+    "id": "listen__to__499c12a2",
+    "prompt": "listen __",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "слушать",
+    "example_blank": "Listen __ me."
+  },
+  {
+    "id": "mention__to__9b8de25d",
+    "prompt": "mention __",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "упоминать кому‑то",
+    "example_blank": "Mention it __ her."
+  },
+  {
+    "id": "occur__to__8c4084cc",
+    "prompt": "occur __",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "приходить в голову",
+    "example_blank": "It occurred __ me."
+  },
+  {
+    "id": "point__at__17fb9d0b",
+    "prompt": "point __",
+    "answer": [
+      "at"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "указывать на",
+    "example_blank": "Point __ the door."
+  },
+  {
+    "id": "prefer__to__acf4ea3d",
+    "prompt": "prefer __",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "предпочитать",
+    "example_blank": "Prefer tea __ coffee."
+  },
+  {
+    "id": "prepare__for__129fc70a",
+    "prompt": "prepare __",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "готовиться к",
+    "example_blank": "Prepare __ the exam."
+  },
+  {
+    "id": "prevent__from__500665f1",
+    "prompt": "prevent __",
+    "answer": [
+      "from"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "предотвратить / помешать",
+    "example_blank": "Prevent him __ leaving."
+  },
+  {
+    "id": "refer__to__cb33ceb4",
+    "prompt": "refer __",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "ссылаться на / направить к",
+    "example_blank": "Refer __ the manual."
+  },
+  {
+    "id": "result_cause_to_happen__in__343647b8",
+    "prompt": "result __ (cause to happen)",
+    "answer": [
+      "in"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "привести к",
+    "example_blank": "Result __ delays."
+  },
+  {
+    "id": "result_be_caused_by__from__fe3155cd",
+    "prompt": "result __ (be caused by)",
+    "answer": [
+      "from"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "произойти из‑за",
+    "example_blank": "Result __ an error."
+  },
+  {
+    "id": "dependent__on__ce29c7cf",
     "prompt": "dependent __",
     "answer": [
       "on"
     ],
-    "group": "adjectives",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "зависим(а) (от) (о/по теме)",
-    "ru_note": "",
-    "context_ru": "на/о (зависит от выражения)",
-    "example_blank": "I’m dependent __ the plan."
+    "context_ru": "зависит от",
+    "example_blank": "Dependent __ weather."
   },
   {
-    "id": "adj_happy_for",
+    "id": "engaged_sb__to__c5d842c6",
+    "prompt": "engaged __ sb",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "помолвлен с",
+    "example_blank": "Engaged __ him."
+  },
+  {
+    "id": "equal__to__349ca16a",
+    "prompt": "equal __",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "равен",
+    "example_blank": "Equal __ everyone."
+  },
+  {
+    "id": "independent__of__ef11d329",
+    "prompt": "independent __",
+    "answer": [
+      "of"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "независим от",
+    "example_blank": "Independent __ help."
+  },
+  {
+    "id": "married__to__263f7f1c",
+    "prompt": "married __",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "женат/замужем за",
+    "example_blank": "Married __ her."
+  },
+  {
+    "id": "grateful_sb__to__54373f06",
+    "prompt": "grateful __ sb",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "благодарен кому‑то",
+    "example_blank": "Grateful __ you."
+  },
+  {
+    "id": "grateful_sth__for__3a9ae0a0",
+    "prompt": "grateful __ sth",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "благодарен за",
+    "example_blank": "Grateful __ your help."
+  },
+  {
+    "id": "an_advantage__over__fbd9ed5a",
+    "prompt": "an advantage __",
+    "answer": [
+      "over"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "преимущество над",
+    "example_blank": "an advantage __ competitors"
+  },
+  {
+    "id": "a_demand__for__e7e971c9",
+    "prompt": "a demand __",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "спрос на",
+    "example_blank": "a demand __ housing"
+  },
+  {
+    "id": "a_difference_sth__in__3ff76380",
+    "prompt": "a difference __ sth",
+    "answer": [
+      "in"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "разница в",
+    "example_blank": "a difference __ price"
+  },
+  {
+    "id": "a_difference_opinion__of__f514f959",
+    "prompt": "a difference __ opinion",
+    "answer": [
+      "of"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "разногласие во мнениях",
+    "example_blank": "a difference __ opinion"
+  },
+  {
+    "id": "a_disadvantage__of__e91edd2d",
+    "prompt": "a disadvantage __",
+    "answer": [
+      "of"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "недостаток (чего‑то)",
+    "example_blank": "a disadvantage __ this plan"
+  },
+  {
+    "id": "an_intention_doing_sth__of__2deec88b",
+    "prompt": "an intention __ doing sth",
+    "answer": [
+      "of"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "намерение сделать",
+    "example_blank": "an intention __ moving"
+  },
+  {
+    "id": "aim__at__5b255e25",
+    "prompt": "aim __",
+    "answer": [
+      "at"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "целиться/стремиться к",
+    "example_blank": "Aim __ the target."
+  },
+  {
+    "id": "apologise_sb__to__2b23e55b",
+    "prompt": "apologise __ sb",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "извиниться ПЕРЕД кем‑то",
+    "example_blank": "Apologise __ her."
+  },
+  {
+    "id": "apologise_sth__for__2a530c01",
+    "prompt": "apologise __ sth",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "извиниться ЗА (действие/ситуацию)",
+    "example_blank": "Apologise __ that."
+  },
+  {
+    "id": "disapprove__of__904361de",
+    "prompt": "(dis)approve __",
+    "answer": [
+      "of"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "(не)одобрять",
+    "example_blank": "Approve __ the idea."
+  },
+  {
+    "id": "belong__to__7b746104",
+    "prompt": "belong __",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "принадлежать",
+    "example_blank": "Belong __ me."
+  },
+  {
+    "id": "borrow__from__6c1073b9",
+    "prompt": "borrow __",
+    "answer": [
+      "from"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "занять у",
+    "example_blank": "Borrow money __ him."
+  },
+  {
+    "id": "confess_sth_sb__to__3ea66e9f",
+    "prompt": "confess sth __ sb",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "признаться кому‑то",
+    "example_blank": "Confess it __ her."
+  },
+  {
+    "id": "consist__of__18867302",
+    "prompt": "consist __",
+    "answer": [
+      "of"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "состоять из",
+    "example_blank": "Consist __ two parts."
+  },
+  {
+    "id": "contribute__to__e8cd5ec5",
+    "prompt": "contribute __",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "вносить вклад в",
+    "example_blank": "Contribute __ the project."
+  },
+  {
+    "id": "cover_sbsth__in__1e59237c",
+    "prompt": "cover sb/sth __",
+    "answer": [
+      "in"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "покрыть чем‑то",
+    "example_blank": "Covered __ snow."
+  },
+  {
+    "id": "depend__on__f4585b22",
+    "prompt": "depend __",
+    "answer": [
+      "on"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "зависеть от",
+    "example_blank": "Depend __ it."
+  },
+  {
+    "id": "invest__in__a294b36f",
+    "prompt": "invest __",
+    "answer": [
+      "in"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "инвестировать в",
+    "example_blank": "Invest __ stocks."
+  },
+  {
+    "id": "pay__for__7f099890",
+    "prompt": "pay __",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "платить за",
+    "example_blank": "Pay __ the ticket."
+  },
+  {
+    "id": "rely__on__7531e2e5",
+    "prompt": "rely __",
+    "answer": [
+      "on"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "полагаться на",
+    "example_blank": "Rely __ him."
+  },
+  {
+    "id": "spend_moneytime_sth__on__5e977579",
+    "prompt": "spend money/time __ sth",
+    "answer": [
+      "on"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "тратить на",
+    "example_blank": "Spend time __ work."
+  },
+  {
+    "id": "waste_moneytime_sth__on__67aec06a",
+    "prompt": "waste money/time __ sth",
+    "answer": [
+      "on"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "тратить впустую на",
+    "example_blank": "Waste time __ gossip."
+  },
+  {
+    "id": "excellent__at__21a184b3",
+    "prompt": "excellent __",
+    "answer": [
+      "at"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "отлично (в чём‑то)",
+    "example_blank": "I'm excellent __ maths."
+  },
+  {
+    "id": "experienced__in__e24f20b0",
+    "prompt": "experienced __",
+    "answer": [
+      "in"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "опытен в",
+    "example_blank": "Experienced __ law."
+  },
+  {
+    "id": "happy_sb__for__4553eed5",
     "prompt": "happy __ sb",
     "answer": [
       "for"
     ],
-    "group": "adjectives",
-    "note": "FOR = happy for someone",
-    "tags": [
-      "confuser:happy_for_with_about"
-    ],
-    "ru": "рад(а) за кого-то",
-    "ru_note": "FOR = happy for someone",
-    "context_ru": "эмоция к человеку: «рад(а) за кого-то»",
-    "example_blank": "I’m happy __ you."
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "рад за кого‑то",
+    "example_blank": "Happy __ you."
   },
   {
-    "id": "adj_happy_with",
-    "prompt": "happy __ sth",
-    "answer": [
-      "with"
-    ],
-    "group": "adjectives",
-    "note": "WITH = happy with something",
-    "tags": [
-      "confuser:happy_for_with_about"
-    ],
-    "ru": "доволен/довольна чем-то",
-    "ru_note": "WITH = happy with something",
-    "context_ru": "удовлетворённость результатом/вещью: «доволен(на)»",
-    "example_blank": "I’m happy __ the result."
-  },
-  {
-    "id": "adj_happy_about",
+    "id": "happy_sth__about__64bd42dd",
     "prompt": "happy __ sth",
     "answer": [
       "about"
     ],
-    "group": "adjectives",
-    "note": "ABOUT = happy about news/situation",
-    "tags": [
-      "confuser:happy_for_with_about"
-    ],
-    "ru": "рад(а) по поводу (новости/ситуации)",
-    "ru_note": "ABOUT = happy about news/situation",
-    "context_ru": "эмоция по поводу новости/ситуации",
-    "example_blank": "I’m happy __ the news."
-  },
-  {
-    "id": "adj_responsible_for",
-    "prompt": "responsible __",
-    "answer": [
-      "for"
-    ],
-    "group": "adjectives",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "ответственен/ответственна (за) (за/для)",
-    "ru_note": "",
-    "context_ru": "",
-    "example_blank": "I’m responsible __ it."
+    "context_ru": "доволен чем‑то",
+    "example_blank": "Happy __ the result."
   },
   {
-    "id": "adj_famous_for",
-    "prompt": "famous __",
-    "answer": [
-      "for"
-    ],
-    "group": "adjectives",
-    "note": "FOR = famous for something",
-    "tags": [
-      "confuser:known_as_famous_for"
-    ],
-    "ru": "знаменит(а) (тем, что) (за/для)",
-    "ru_note": "FOR = famous for something",
-    "context_ru": "причина славы: «знаменит тем, что»",
-    "example_blank": "I’m famous __ it."
-  },
-  {
-    "id": "adj_grateful_for",
-    "prompt": "grateful __",
-    "answer": [
-      "for"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "благодарен/благодарна (за) (за/для)",
-    "ru_note": "",
-    "context_ru": "",
-    "example_blank": "I’m grateful __ it."
-  },
-  {
-    "id": "adj_delighted_with",
-    "prompt": "delighted __",
-    "answer": [
-      "with"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "очень доволен/довольна (с/чем-то)",
-    "ru_note": "",
-    "context_ru": "с/взаимодействие или оценка результата (зависит от выражения)",
-    "example_blank": "I’m delighted __ the result."
-  },
-  {
-    "id": "adj_pleased_with",
-    "prompt": "pleased __",
-    "answer": [
-      "with"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "доволен/довольна (с/чем-то)",
-    "ru_note": "",
-    "context_ru": "с/взаимодействие или оценка результата (зависит от выражения)",
-    "example_blank": "I’m pleased __ the result."
-  },
-  {
-    "id": "adj_impressed_by",
-    "prompt": "impressed __",
-    "answer": [
-      "by"
-    ],
-    "group": "adjectives",
-    "note": "BY = impressed by what caused it",
-    "tags": [
-      "confuser:impressed_by_with"
-    ],
-    "ru": "впечатлён(а)",
-    "ru_note": "BY = impressed by what caused it",
-    "context_ru": "впечатление: by = причина, with = результат/вещь",
-    "example_blank": "I’m impressed __ her speech."
-  },
-  {
-    "id": "adj_impressed_with",
-    "prompt": "impressed __",
-    "answer": [
-      "with"
-    ],
-    "group": "adjectives",
-    "note": "WITH = impressed with the result/thing",
-    "tags": [
-      "confuser:impressed_by_with"
-    ],
-    "ru": "впечатлён(а)",
-    "ru_note": "WITH = impressed with the result/thing",
-    "context_ru": "впечатление: by = причина, with = результат/вещь",
-    "example_blank": "I’m impressed __ the result."
-  },
-  {
-    "id": "adj_familiar_to",
-    "prompt": "familiar __ sb (well known)",
-    "answer": [
-      "to"
-    ],
-    "group": "adjectives",
-    "note": "TO = well known to",
-    "tags": [
-      "confuser:familiar_to_with"
-    ],
-    "ru": "знаком/известен кому-то",
-    "ru_note": "TO = well known to",
-    "context_ru": "familiar to = узнаваем для; familiar with = хорошо знать",
-    "example_blank": "I’m familiar __ you."
-  },
-  {
-    "id": "adj_familiar_with",
-    "prompt": "familiar __ sth (know well)",
-    "answer": [
-      "with"
-    ],
-    "group": "adjectives",
-    "note": "WITH = know well",
-    "tags": [
-      "confuser:familiar_to_with"
-    ],
-    "ru": "хорошо знаком с",
-    "ru_note": "WITH = know well",
-    "context_ru": "familiar to = узнаваем для; familiar with = хорошо знать",
-    "example_blank": "I’m familiar __ the result."
-  },
-  {
-    "id": "adj_crazy_about",
-    "prompt": "crazy __",
+    "id": "happy_sth__about__82434edd",
+    "prompt": "happy __ sth",
     "answer": [
       "about"
     ],
-    "group": "adjectives",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "без ума (от) (о/по поводу)",
-    "ru_note": "",
-    "context_ru": "о/по поводу темы/ситуации",
-    "example_blank": "I’m crazy __ the news."
+    "context_ru": "рад/доволен ситуацией/новостью",
+    "example_blank": "Happy __ the news."
   },
   {
-    "id": "adj_curious_about",
-    "prompt": "curious __",
-    "answer": [
-      "about"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "любопытно (о/насчёт) (о/по поводу)",
-    "ru_note": "",
-    "context_ru": "о/по поводу темы/ситуации",
-    "example_blank": "I’m curious __ the news."
-  },
-  {
-    "id": "adj_excited_about",
-    "prompt": "excited __",
-    "answer": [
-      "about"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "взволнован(а)/рад(а) (по поводу) (о/по поводу)",
-    "ru_note": "",
-    "context_ru": "о/по поводу темы/ситуации",
-    "example_blank": "I’m excited __ the news."
-  },
-  {
-    "id": "adj_enthusiastic_about",
-    "prompt": "enthusiastic __ sth",
-    "answer": [
-      "about"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "в восторге/энтузиазм (по поводу) (о/по поводу)",
-    "ru_note": "",
-    "context_ru": "о/по поводу темы/ситуации",
-    "example_blank": "I’m enthusiastic __ the news."
-  },
-  {
-    "id": "adj_sorry_for",
-    "prompt": "feel sorry __ sb",
-    "answer": [
-      "for"
-    ],
-    "group": "confusers",
-    "note": "FOR = feel sorry for someone",
-    "tags": [
-      "confuser:sorry_for_about"
-    ],
-    "ru": "мне жаль кого-то / сочувствую",
-    "ru_note": "FOR = feel sorry for someone",
-    "context_ru": "сочувствие к человеку (не извинение)",
-    "example_blank": "I feel sorry __ him."
-  },
-  {
-    "id": "adj_sorry_about",
-    "prompt": "sorry __ sth",
-    "answer": [
-      "about"
-    ],
-    "group": "confusers",
-    "note": "ABOUT = sorry about something",
-    "tags": [
-      "confuser:sorry_for_about"
-    ],
-    "ru": "сожалею о / по поводу (чего-то)",
-    "ru_note": "ABOUT = sorry about something",
-    "context_ru": "извинение/сожаление по поводу ситуации",
-    "example_blank": "Sorry __ the delay."
-  },
-  {
-    "id": "adj_angry_with",
-    "prompt": "angry __ sb",
-    "answer": [
-      "with"
-    ],
-    "group": "confusers",
-    "note": "WITH = angry with a person",
-    "tags": [
-      "confuser:angry_with_about"
-    ],
-    "ru": "злой/зла",
-    "ru_note": "WITH = angry with a person",
-    "context_ru": "злость на человека",
-    "example_blank": "I’m angry __ him."
-  },
-  {
-    "id": "adj_angry_about",
-    "prompt": "angry __ sth",
-    "answer": [
-      "about"
-    ],
-    "group": "confusers",
-    "note": "ABOUT = angry about a thing/situation",
-    "tags": [
-      "confuser:angry_with_about"
-    ],
-    "ru": "злой/зла",
-    "ru_note": "ABOUT = angry about a thing/situation",
-    "context_ru": "злость из‑за ситуации/факта",
-    "example_blank": "I’m angry __ the decision."
-  },
-  {
-    "id": "adj_annoyed_with",
-    "prompt": "annoyed __ sb",
-    "answer": [
-      "with"
-    ],
-    "group": "confusers",
-    "note": "WITH = annoyed with a person",
-    "tags": [
-      "confuser:annoyed_with_about"
-    ],
-    "ru": "раздражён(а)",
-    "ru_note": "WITH = annoyed with a person",
-    "context_ru": "раздражение на человека",
-    "example_blank": "She’s annoyed __ me."
-  },
-  {
-    "id": "adj_annoyed_about",
-    "prompt": "annoyed __ sth",
-    "answer": [
-      "about"
-    ],
-    "group": "confusers",
-    "note": "ABOUT = annoyed about a thing/situation",
-    "tags": [
-      "confuser:annoyed_with_about"
-    ],
-    "ru": "раздражён(а)",
-    "ru_note": "ABOUT = annoyed about a thing/situation",
-    "context_ru": "раздражение из‑за ситуации",
-    "example_blank": "I’m annoyed __ the noise."
-  },
-  {
-    "id": "adj_proud_of",
+    "id": "proud__of__a599e997",
     "prompt": "proud __",
     "answer": [
       "of"
     ],
-    "group": "adjectives",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "горд(а) (о/из/от)",
-    "ru_note": "",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "I’m proud __ it."
+    "context_ru": "гордится",
+    "example_blank": "Proud __ my work."
   },
   {
-    "id": "adj_fond_of",
-    "prompt": "fond __",
-    "answer": [
-      "of"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "питает слабость/любит (о/из/от)",
-    "ru_note": "",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "I’m fond __ it."
-  },
-  {
-    "id": "adj_aware_of",
-    "prompt": "(un)aware __",
-    "answer": [
-      "of"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "aware (о/из/от)",
-    "ru_note": "",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "I’m aware __ it."
-  },
-  {
-    "id": "adj_typical_of",
-    "prompt": "typical __",
-    "answer": [
-      "of"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "типично для (о/из/от)",
-    "ru_note": "",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "I’m typical __ it."
-  },
-  {
-    "id": "adj_accustomed_to",
-    "prompt": "accustomed __",
-    "answer": [
-      "to"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "привык(ла) к (к/в/для)",
-    "ru_note": "",
-    "context_ru": "направление/адресат/реакция",
-    "example_blank": "I’m accustomed __ you."
-  },
-  {
-    "id": "adj_addicted_to",
-    "prompt": "addicted __",
-    "answer": [
-      "to"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "зависим(а) от (к/в/для)",
-    "ru_note": "",
-    "context_ru": "направление/адресат/реакция",
-    "example_blank": "I’m addicted __ you."
-  },
-  {
-    "id": "adj_cruel_to",
-    "prompt": "cruel __",
-    "answer": [
-      "to"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "жесток(ий/ая) к (к/в/для)",
-    "ru_note": "",
-    "context_ru": "направление/адресат/реакция",
-    "example_blank": "I’m cruel __ you."
-  },
-  {
-    "id": "adj_rude_to",
-    "prompt": "rude __",
-    "answer": [
-      "to"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "груб(ый/ая) с (к/в/для)",
-    "ru_note": "",
-    "context_ru": "направление/адресат/реакция",
-    "example_blank": "I’m rude __ you."
-  },
-  {
-    "id": "adj_respected_by",
+    "id": "respected__by__ba79da87",
     "prompt": "respected __",
     "answer": [
       "by"
     ],
-    "group": "adjectives",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "уважаем(ый/ая) (кем/чем)",
-    "ru_note": "",
-    "context_ru": "кем/чем вызвано или кем сделано (agent/cause)",
-    "example_blank": "I’m respected __ her speech."
+    "context_ru": "уважаем",
+    "example_blank": "Respected __ colleagues."
   },
   {
-    "id": "adj_amused_by",
-    "prompt": "amused __",
+    "id": "responsible__for__3b178f04",
+    "prompt": "responsible __",
     "answer": [
-      "by"
+      "for"
     ],
-    "group": "adjectives",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "позабавлен(а) (кем/чем)",
-    "ru_note": "",
-    "context_ru": "кем/чем вызвано или кем сделано (agent/cause)",
-    "example_blank": "I’m amused __ her speech."
+    "context_ru": "ответственный за",
+    "example_blank": "Responsible __ the project."
   },
   {
-    "id": "adj_astonished_by",
-    "prompt": "astonished __",
-    "answer": [
-      "by"
-    ],
-    "group": "adjectives",
-    "note": "",
-    "tags": [],
-    "ru": "поражён(а) (кем/чем)",
-    "ru_note": "",
-    "context_ru": "кем/чем вызвано или кем сделано (agent/cause)",
-    "example_blank": "I’m astonished __ her speech."
-  },
-  {
-    "id": "adj_shocked_at",
-    "prompt": "shocked __ (a fact/news)",
-    "answer": [
-      "at"
-    ],
-    "group": "confusers",
-    "note": "AT = shocked at a fact/news",
-    "tags": [
-      "confuser:shocked_at_by"
-    ],
-    "ru": "шокирован(а) (навык/занятие)",
-    "ru_note": "AT = shocked at a fact/news",
-    "context_ru": "шок: at = факт/новость; by = причина",
-    "example_blank": "I was shocked __ the news."
-  },
-  {
-    "id": "adj_shocked_by",
-    "prompt": "shocked __ (what caused it)",
-    "answer": [
-      "by"
-    ],
-    "group": "confusers",
-    "note": "BY = shocked by what caused it",
-    "tags": [
-      "confuser:shocked_at_by"
-    ],
-    "ru": "шокирован(а) (кем/чем)",
-    "ru_note": "BY = shocked by what caused it",
-    "context_ru": "шок: at = факт/новость; by = причина",
-    "example_blank": "I was shocked __ what he did."
-  },
-  {
-    "id": "noun_answer_to",
+    "id": "an_answer__to__e38011b9",
     "prompt": "an answer __",
     "answer": [
       "to"
     ],
-    "group": "nouns",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "ответ (к/в/для)",
-    "ru_note": "",
-    "context_ru": "направление/адресат/реакция",
-    "example_blank": "This is the answer __ your question."
+    "context_ru": "ответ на",
+    "example_blank": "an answer __ this question"
   },
   {
-    "id": "noun_reply_to",
-    "prompt": "a reply __",
+    "id": "an_expert__on__4efb41c4",
+    "prompt": "an expert __",
     "answer": [
-      "to"
+      "on"
     ],
-    "group": "nouns",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "ответ (на письмо/сообщение) (к/в/для)",
-    "ru_note": "",
-    "context_ru": "направление/адресат/реакция",
-    "example_blank": "I sent a reply __ your email."
+    "context_ru": "эксперт в/по",
+    "example_blank": "an expert __ finance"
   },
   {
-    "id": "noun_pride_in",
+    "id": "take_pride__in__4f29f2d8",
     "prompt": "(take) pride __",
     "answer": [
       "in"
     ],
-    "group": "nouns",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "pride (сфера/область)",
-    "ru_note": "",
-    "context_ru": "сфера/область/вовлечённость",
-    "example_blank": "Take pride __ your work."
+    "context_ru": "гордость за",
+    "example_blank": "take pride __ your work"
   },
   {
-    "id": "noun_report_on",
+    "id": "a_reply__to__f0a19d06",
+    "prompt": "a reply __",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "ответ на сообщение",
+    "example_blank": "a reply __ your email"
+  },
+  {
+    "id": "a_report_sth__on__14eed38b",
     "prompt": "a report __ sth",
     "answer": [
       "on"
     ],
-    "group": "nouns",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "отчёт (о/по теме)",
-    "ru_note": "",
-    "context_ru": "тема/о чём: report on",
-    "example_blank": "I read a report __ climate change."
+    "context_ru": "отчёт о",
+    "example_blank": "a report __ inflation"
   },
   {
-    "id": "noun_sympathy_for",
-    "prompt": "(feel) sympathy __",
-    "answer": [
-      "for"
-    ],
-    "group": "nouns",
-    "note": "",
-    "tags": [],
-    "ru": "sympathy (за/для)",
-    "ru_note": "",
-    "context_ru": "",
-    "example_blank": "I feel sympathy __ the victims."
-  },
-  {
-    "id": "noun_talent_for",
-    "prompt": "a talent __",
-    "answer": [
-      "for"
-    ],
-    "group": "nouns",
-    "note": "",
-    "tags": [],
-    "ru": "талант (за/для)",
-    "ru_note": "",
-    "context_ru": "",
-    "example_blank": "She has a talent __ languages."
-  },
-  {
-    "id": "noun_opportunity_to",
+    "id": "an_opportunity_do_sth__to__59715144",
     "prompt": "an opportunity __ (do sth)",
     "answer": [
       "to"
     ],
-    "group": "nouns",
-    "note": "main pattern: an opportunity to do sth",
-    "tags": [],
-    "ru": "возможность (к/в/для)",
-    "ru_note": "main pattern: an opportunity to do sth",
-    "context_ru": "направление/адресат/реакция",
-    "example_blank": "It’s an opportunity __ growth."
-  },
-  {
-    "id": "noun_opportunity_for",
-    "prompt": "an opportunity __ sth",
-    "answer": [
-      "for"
-    ],
-    "group": "nouns",
-    "note": "also correct: an opportunity for sth",
-    "tags": [],
-    "ru": "возможность (за/для)",
-    "ru_note": "also correct: an opportunity for sth",
-    "context_ru": "",
-    "example_blank": "It’s an opportunity __ growth."
-  },
-  {
-    "id": "noun_knowledge_of",
-    "prompt": "knowledge __",
-    "answer": [
-      "of"
-    ],
-    "group": "nouns",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "знание (о/из/от)",
-    "ru_note": "",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "He has knowledge __ the subject."
+    "context_ru": "возможность сделать",
+    "example_blank": "an opportunity __ learn"
   },
   {
-    "id": "noun_rise_in",
-    "prompt": "a rise __",
-    "answer": [
-      "in"
-    ],
-    "group": "nouns",
-    "note": "",
-    "tags": [],
-    "ru": "рост (сфера/область)",
-    "ru_note": "",
-    "context_ru": "сфера/область/вовлечённость",
-    "example_blank": "There was a rise __ prices."
-  },
-  {
-    "id": "noun_taste_of",
-    "prompt": "a taste __ (flavour / brief experience)",
-    "answer": [
-      "of"
-    ],
-    "group": "confusers",
-    "note": "OF = flavour / brief experience",
-    "tags": [
-      "confuser:taste_of_for"
-    ],
-    "ru": "вкус/привкус (о/из/от)",
-    "ru_note": "OF = flavour / brief experience",
-    "context_ru": "taste of = привкус/кусочек опыта; taste for = предпочтение",
-    "example_blank": "A taste __ freedom."
-  },
-  {
-    "id": "noun_taste_for",
-    "prompt": "a taste __ (liking / preference)",
-    "answer": [
-      "for"
-    ],
-    "group": "confusers",
-    "note": "FOR = liking / preference",
-    "tags": [
-      "confuser:taste_of_for"
-    ],
-    "ru": "вкус/привкус (за/для)",
-    "ru_note": "FOR = liking / preference",
-    "context_ru": "taste of = привкус/кусочек опыта; taste for = предпочтение",
-    "example_blank": "A taste __ jazz."
-  },
-  {
-    "id": "verb_associate_with",
+    "id": "associate__with__4b2a4a83",
     "prompt": "associate __",
     "answer": [
       "with"
     ],
-    "group": "verbs",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "ассоциировать (с/чем-то)",
-    "ru_note": "",
-    "context_ru": "с/взаимодействие или оценка результата (зависит от выражения)",
-    "example_blank": "I associate it __ childhood."
+    "context_ru": "ассоциировать с",
+    "example_blank": "Associate it __ success."
   },
   {
-    "id": "verb_cooperate_with",
-    "prompt": "cooperate __",
-    "answer": [
-      "with"
-    ],
-    "group": "verbs",
-    "note": "",
-    "tags": [],
-    "ru": "сотрудничать (с/чем-то)",
-    "ru_note": "",
-    "context_ru": "с/взаимодействие или оценка результата (зависит от выражения)",
-    "example_blank": "We cooperated __ the police."
-  },
-  {
-    "id": "verb_deal_with",
-    "prompt": "deal __",
-    "answer": [
-      "with"
-    ],
-    "group": "verbs",
-    "note": "",
-    "tags": [],
-    "ru": "иметь дело / разбираться (с/чем-то)",
-    "ru_note": "",
-    "context_ru": "с/взаимодействие или оценка результата (зависит от выражения)",
-    "example_blank": "We need to deal __ this problem."
-  },
-  {
-    "id": "verb_provide_with",
-    "prompt": "provide sb __ sth",
-    "answer": [
-      "with"
-    ],
-    "group": "verbs",
-    "note": "",
-    "tags": [],
-    "ru": "provide sb (с/чем-то)",
-    "ru_note": "",
-    "context_ru": "с/взаимодействие или оценка результата (зависит от выражения)",
-    "example_blank": "provide you __ the result."
-  },
-  {
-    "id": "verb_supply_with",
-    "prompt": "supply sb __ sth",
-    "answer": [
-      "with"
-    ],
-    "group": "verbs",
-    "note": "",
-    "tags": [],
-    "ru": "supply sb (с/чем-то)",
-    "ru_note": "",
-    "context_ru": "с/взаимодействие или оценка результата (зависит от выражения)",
-    "example_blank": "supply you __ the result."
-  },
-  {
-    "id": "verb_fill_with",
-    "prompt": "fill sth __ sth",
-    "answer": [
-      "with"
-    ],
-    "group": "verbs",
-    "note": "",
-    "tags": [],
-    "ru": "fill sth (с/чем-то)",
-    "ru_note": "",
-    "context_ru": "с/взаимодействие или оценка результата (зависит от выражения)",
-    "example_blank": "Fill the glass __ water."
-  },
-  {
-    "id": "verb_provide_to",
-    "prompt": "provide sth __ sb",
-    "answer": [
-      "to"
-    ],
-    "group": "verbs",
-    "note": "",
-    "tags": [],
-    "ru": "provide sth (к/в/для)",
-    "ru_note": "",
-    "context_ru": "направление/адресат/реакция",
-    "example_blank": "provide you __ you."
-  },
-  {
-    "id": "verb_supply_to",
-    "prompt": "supply sth __ sb",
-    "answer": [
-      "to"
-    ],
-    "group": "verbs",
-    "note": "",
-    "tags": [],
-    "ru": "supply sth (к/в/для)",
-    "ru_note": "",
-    "context_ru": "направление/адресат/реакция",
-    "example_blank": "supply you __ you."
-  },
-  {
-    "id": "verb_concentrate_on",
+    "id": "concentrate_sth__on__af3af05a",
     "prompt": "concentrate __ sth",
     "answer": [
       "on"
     ],
-    "group": "verbs",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "концентрироваться (о/по теме)",
-    "ru_note": "",
-    "context_ru": "фокус/внимание: on",
-    "example_blank": "Concentrate __ the task."
+    "context_ru": "сосредоточиться на",
+    "example_blank": "Concentrate __ work."
   },
   {
-    "id": "verb_congratulate_on",
+    "id": "congratulate_sb_sth__on__a9d5d1c4",
     "prompt": "congratulate sb __ sth",
     "answer": [
       "on"
     ],
-    "group": "verbs",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "congratulate sb (о/по теме)",
-    "ru_note": "",
-    "context_ru": "поздравление: congratulate on",
-    "example_blank": "I congratulated her __ her promotion."
+    "context_ru": "поздравить с",
+    "example_blank": "Congratulate you __ winning."
   },
   {
-    "id": "verb_include_in",
-    "prompt": "include sth __ (a list)",
+    "id": "cooperate_sb__with__da59ab78",
+    "prompt": "cooperate __ sb",
     "answer": [
-      "in"
+      "with"
     ],
-    "group": "verbs",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "include sth (сфера/область)",
-    "ru_note": "",
-    "context_ru": "сфера/область/вовлечённость",
-    "example_blank": "Please include it __ the list."
+    "context_ru": "сотрудничать с",
+    "example_blank": "Cooperate __ police."
   },
   {
-    "id": "verb_involve_in",
-    "prompt": "involve sb __ sth",
+    "id": "deal__with__16ee2a1c",
+    "prompt": "deal __",
     "answer": [
-      "in"
+      "with"
     ],
-    "group": "verbs",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "involve sb (сфера/область)",
-    "ru_note": "",
-    "context_ru": "сфера/область/вовлечённость",
-    "example_blank": "Don’t involve me __ this."
+    "context_ru": "иметь дело с",
+    "example_blank": "Deal __ clients."
   },
   {
-    "id": "verb_succeed_in",
-    "prompt": "succeed __ (doing sth)",
-    "answer": [
-      "in"
-    ],
-    "group": "verbs",
-    "note": "IN = succeed in doing sth",
-    "tags": [],
-    "ru": "добиться успеха (сфера/область)",
-    "ru_note": "IN = succeed in doing sth",
-    "context_ru": "сфера/область/вовлечённость",
-    "example_blank": "succeed __ finance."
-  },
-  {
-    "id": "verb_succeed_at",
-    "prompt": "succeed __ (a task/skill)",
-    "answer": [
-      "at"
-    ],
-    "group": "verbs",
-    "note": "AT = succeed at a task/skill",
-    "tags": [],
-    "ru": "добиться успеха (навык/занятие)",
-    "ru_note": "AT = succeed at a task/skill",
-    "context_ru": "навык/умение/занятие",
-    "example_blank": "succeed __ maths."
-  },
-  {
-    "id": "verb_know_about",
-    "prompt": "know __ sth",
-    "answer": [
-      "about"
-    ],
-    "group": "verbs",
-    "note": "",
-    "tags": [],
-    "ru": "знать (о/по поводу)",
-    "ru_note": "",
-    "context_ru": "о/по поводу темы/ситуации",
-    "example_blank": "Do you know __ this topic?"
-  },
-  {
-    "id": "verb_praise_for",
+    "id": "praise_sb_sth__for__ad05e912",
     "prompt": "praise sb __ sth",
     "answer": [
       "for"
     ],
-    "group": "verbs",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "praise sb (за/для)",
-    "ru_note": "",
-    "context_ru": "",
-    "example_blank": "They praised him __ his courage."
+    "context_ru": "хвалить за",
+    "example_blank": "Praise her __ effort."
   },
   {
-    "id": "conf_fight_with",
-    "prompt": "fight __ sb",
+    "id": "provide_sb_sth__with__42ea273d",
+    "prompt": "provide sb __ sth",
     "answer": [
       "with"
     ],
-    "group": "confusers",
-    "note": "WITH = fight with someone",
-    "tags": [
-      "confuser:fight_with_about"
-    ],
-    "ru": "ссориться/драться (с/чем-то)",
-    "ru_note": "WITH = fight with someone",
-    "context_ru": "с/взаимодействие или оценка результата (зависит от выражения)",
-    "example_blank": "fight __ you."
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "обеспечить чем‑то",
+    "example_blank": "Provide them __ food."
   },
   {
-    "id": "conf_fight_about",
-    "prompt": "fight __ sth",
-    "answer": [
-      "about"
-    ],
-    "group": "confusers",
-    "note": "ABOUT = fight about something",
-    "tags": [
-      "confuser:fight_with_about"
-    ],
-    "ru": "ссориться/драться (о/по поводу)",
-    "ru_note": "ABOUT = fight about something",
-    "context_ru": "о/по поводу темы/ситуации",
-    "example_blank": "fight __ the news."
-  },
-  {
-    "id": "conf_apply_to",
-    "prompt": "apply __ (a person/institution)",
+    "id": "provide_sth_sb__to__1b424c14",
+    "prompt": "provide sth __ sb",
     "answer": [
       "to"
     ],
-    "group": "confusers",
-    "note": "TO = apply to a person/institution",
-    "tags": [
-      "confuser:apply_to_for"
-    ],
-    "ru": "подавать (заявку) (к/в/для)",
-    "ru_note": "TO = apply to a person/institution",
-    "context_ru": "apply to = обратиться в учреждение; apply for = подать на вещь/должность",
-    "example_blank": "I applied __ the university."
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "предоставить кому‑то",
+    "example_blank": "Provide info __ them."
   },
   {
-    "id": "conf_apply_for",
-    "prompt": "apply __ (a job/visa/thing)",
+    "id": "succeed_doing_sth__in__0084c293",
+    "prompt": "succeed __ (doing sth)",
     "answer": [
-      "for"
+      "in"
     ],
-    "group": "confusers",
-    "note": "FOR = apply for a job/visa/thing",
-    "tags": [
-      "confuser:apply_to_for"
-    ],
-    "ru": "подавать (заявку) (за/для)",
-    "ru_note": "FOR = apply for a job/visa/thing",
-    "context_ru": "apply to = обратиться в учреждение; apply for = подать на вещь/должность",
-    "example_blank": "I applied __ a visa."
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "преуспеть в",
+    "example_blank": "Succeed __ passing."
   },
   {
-    "id": "conf_known_as",
-    "prompt": "known __",
+    "id": "succeed_a_taskskill__at__44898c20",
+    "prompt": "succeed __ (a task/skill)",
     "answer": [
-      "as"
+      "at"
     ],
-    "group": "confusers",
-    "note": "AS = known as a name/role",
-    "tags": [
-      "confuser:known_as_famous_for"
-    ],
-    "ru": "known (как/в качестве)",
-    "ru_note": "AS = known as a name/role",
-    "context_ru": "название/роль: «известен как»",
-    "example_blank": "He’s known __ “The Boss”."
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "преуспеть в (деле)",
+    "example_blank": "Succeed __ business."
   },
   {
-    "id": "conf_famous_for",
+    "id": "supply_sb_sth__with__c711fcc7",
+    "prompt": "supply sb __ sth",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "снабжать чем‑то",
+    "example_blank": "Supply us __ water."
+  },
+  {
+    "id": "supply_sth_sb__to__5fd585b4",
+    "prompt": "supply sth __ sb",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "поставлять кому‑то",
+    "example_blank": "Supply parts __ them."
+  },
+  {
+    "id": "accustomed__to__0a6da0d3",
+    "prompt": "accustomed __",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "привык к",
+    "example_blank": "Accustomed __ cold."
+  },
+  {
+    "id": "addicted__to__1dbdfb80",
+    "prompt": "addicted __",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "зависим от",
+    "example_blank": "Addicted __ coffee."
+  },
+  {
+    "id": "amused__by__a1e2a3d8",
+    "prompt": "amused __",
+    "answer": [
+      "by"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "позабавлен чем‑то",
+    "example_blank": "Amused __ the joke."
+  },
+  {
+    "id": "astonished__by__5ba1e9c7",
+    "prompt": "astonished __",
+    "answer": [
+      "by"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "поражён чем‑то",
+    "example_blank": "Astonished __ the news."
+  },
+  {
+    "id": "unaware__of__642259ec",
+    "prompt": "(un)aware __",
+    "answer": [
+      "of"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "(не)осведомлён о",
+    "example_blank": "Aware __ the rules."
+  },
+  {
+    "id": "crazy__about__f5327787",
+    "prompt": "crazy __",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "без ума от",
+    "example_blank": "Crazy __ her."
+  },
+  {
+    "id": "cruel__to__bf5416ac",
+    "prompt": "cruel __",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "жесток к",
+    "example_blank": "Cruel __ animals."
+  },
+  {
+    "id": "curious__about__dbbe59f2",
+    "prompt": "curious __",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "любопытен насчёт",
+    "example_blank": "Curious __ it."
+  },
+  {
+    "id": "delighted__with__50db33f0",
+    "prompt": "delighted __",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "в восторге от",
+    "example_blank": "Delighted __ the gift."
+  },
+  {
+    "id": "enthusiastic__about__991b9fea",
+    "prompt": "enthusiastic __",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "в восторге от / увлечён",
+    "example_blank": "Enthusiastic __ sports."
+  },
+  {
+    "id": "excited__about__598dce8f",
+    "prompt": "excited __",
+    "answer": [
+      "about"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "взволнован насчёт",
+    "example_blank": "Excited __ the trip."
+  },
+  {
+    "id": "familiar_sb_well_known__to__4a34ec7f",
+    "prompt": "familiar __ sb (=well known)",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "известен кому‑то",
+    "example_blank": "Familiar __ everyone."
+  },
+  {
+    "id": "familiar_sb_friendly__with__5db22f07",
+    "prompt": "familiar __ sb (=friendly)",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "в фамильярных/дружеских отношениях с",
+    "example_blank": "Familiar __ the staff."
+  },
+  {
+    "id": "be_familiar_sth_know_well__with__b0f1c142",
+    "prompt": "be familiar __ sth (=know well)",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "хорошо разбираться в",
+    "example_blank": "Familiar __ the system."
+  },
+  {
+    "id": "famous__for__74ddc6da",
     "prompt": "famous __",
     "answer": [
       "for"
     ],
-    "group": "confusers",
-    "note": "FOR = famous for something",
-    "tags": [
-      "confuser:known_as_famous_for"
-    ],
-    "ru": "знаменит(а) (тем, что) (за/для)",
-    "ru_note": "FOR = famous for something",
-    "context_ru": "причина славы: «знаменит тем, что»",
-    "example_blank": "It’s famous __ its food."
-  },
-  {
-    "id": "conf_protection_from",
-    "prompt": "protection __ (harm/cold/etc.)",
-    "answer": [
-      "from"
-    ],
-    "group": "confusers",
-    "note": "FROM = protection from something",
-    "tags": [
-      "confuser:protection_from_against"
-    ],
-    "ru": "protection (от)",
-    "ru_note": "FROM = protection from something",
-    "context_ru": "защита: from = от вреда/влияния; against = от атаки/угрозы",
-    "example_blank": "Protection __ the cold."
-  },
-  {
-    "id": "conf_protection_against",
-    "prompt": "protection __ (attack/fraud/etc.)",
-    "answer": [
-      "against"
-    ],
-    "group": "confusers",
-    "note": "AGAINST = protection against something",
-    "tags": [
-      "confuser:protection_from_against"
-    ],
-    "ru": "protection (против)",
-    "ru_note": "AGAINST = protection against something",
-    "context_ru": "защита: from = от вреда/влияния; against = от атаки/угрозы",
-    "example_blank": "Protection __ fraud."
-  },
-  {
-    "id": "into_look_into",
-    "prompt": "look __ (a problem)",
-    "answer": [
-      "into"
-    ],
-    "group": "into_set",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "разобраться/проверить (в/внутрь)",
-    "ru_note": "устойчивое «into»: look into / get into / run into / turn into и т.д.",
-    "context_ru": "устойч. сочетание: into = «в/вляпаться/превратить(ся)»",
-    "example_blank": "We’ll look __ the problem."
+    "context_ru": "известен чем‑то",
+    "example_blank": "Famous __ its beaches."
   },
   {
-    "id": "into_run_into",
-    "prompt": "run __ (an old friend / a problem)",
-    "answer": [
-      "into"
-    ],
-    "group": "into_set",
-    "note": "",
-    "tags": [],
-    "ru": "случайно столкнуться (в/внутрь)",
-    "ru_note": "устойчивое «into»: look into / get into / run into / turn into и т.д.",
-    "context_ru": "устойч. сочетание: into = «в/вляпаться/превратить(ся)»",
-    "example_blank": "I ran __ an old friend yesterday."
-  },
-  {
-    "id": "into_get_into",
-    "prompt": "get __ trouble",
-    "answer": [
-      "into"
-    ],
-    "group": "into_set",
-    "note": "",
-    "tags": [],
-    "ru": "вляпаться/попасть (в/внутрь)",
-    "ru_note": "устойчивое «into»: look into / get into / run into / turn into и т.д.",
-    "context_ru": "устойч. сочетание: into = «в/вляпаться/превратить(ся)»",
-    "example_blank": "He got __ trouble again."
-  },
-  {
-    "id": "into_break_into",
-    "prompt": "break __ (a house)",
-    "answer": [
-      "into"
-    ],
-    "group": "into_set",
-    "note": "",
-    "tags": [],
-    "ru": "вломиться (в/внутрь)",
-    "ru_note": "устойчивое «into»: look into / get into / run into / turn into и т.д.",
-    "context_ru": "устойч. сочетание: into = «в/вляпаться/превратить(ся)»",
-    "example_blank": "Someone broke __ the house."
-  },
-  {
-    "id": "into_talk_into",
-    "prompt": "talk sb __ doing sth",
-    "answer": [
-      "into"
-    ],
-    "group": "into_set",
-    "note": "",
-    "tags": [],
-    "ru": "talk sb (в/внутрь)",
-    "ru_note": "устойчивое «into»: look into / get into / run into / turn into и т.д.",
-    "context_ru": "устойч. сочетание: into = «в/вляпаться/превратить(ся)»",
-    "example_blank": "She talked me __ going."
-  },
-  {
-    "id": "into_turn_into",
-    "prompt": "turn __ (ice / something else)",
-    "answer": [
-      "into"
-    ],
-    "group": "into_set",
-    "note": "",
-    "tags": [],
-    "ru": "превратиться/превратить (в/внутрь)",
-    "ru_note": "устойчивое «into»: look into / get into / run into / turn into и т.д.",
-    "context_ru": "устойч. сочетание: into = «в/вляпаться/превратить(ся)»",
-    "example_blank": "Water turns __ ice."
-  },
-  {
-    "id": "into_translate_into",
-    "prompt": "translate __ (English / another language)",
-    "answer": [
-      "into"
-    ],
-    "group": "into_set",
-    "note": "",
-    "tags": [],
-    "ru": "перевести (в/внутрь)",
-    "ru_note": "устойчивое «into»: look into / get into / run into / turn into и т.д.",
-    "context_ru": "устойч. сочетание: into = «в/вляпаться/превратить(ся)»",
-    "example_blank": "Translate it __ English."
-  },
-  {
-    "id": "into_be_into",
-    "prompt": "be __ (music / a hobby)",
-    "answer": [
-      "into"
-    ],
-    "group": "into_set",
-    "note": "",
-    "tags": [],
-    "ru": "увлекаться (в/внутрь)",
-    "ru_note": "устойчивое «into»: look into / get into / run into / turn into и т.д.",
-    "context_ru": "устойч. сочетание: into = «в/вляпаться/превратить(ся)»",
-    "example_blank": "I’m __ photography."
-  },
-  {
-    "id": "out_of_control",
-    "prompt": "out __ control",
+    "id": "fond__of__c61592f1",
+    "prompt": "fond __",
     "answer": [
       "of"
     ],
-    "group": "out_of_set",
-    "note": "forms “out of …”",
+    "group": "prepositions",
+    "note": "",
     "tags": [],
-    "ru": "вне / без",
-    "ru_note": "forms “out of …”",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "It’s out __ control."
+    "context_ru": "нежно любит",
+    "example_blank": "Fond __ cats."
   },
   {
-    "id": "out_of_money",
-    "prompt": "out __ money",
+    "id": "impressed_what_caused_it__by__8ec7f30f",
+    "prompt": "impressed __ (what caused it)",
+    "answer": [
+      "by"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "впечатлён(а) тем, что это вызвало (поступком/выступлением/фактом)",
+    "example_blank": "I’m impressed __ her performance."
+  },
+  {
+    "id": "impressed_the_resultthing__with__86e3052b",
+    "prompt": "impressed __ (the result/thing)",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "впечатлён(а) результатом/качеством (оценка результата)",
+    "example_blank": "I’m impressed __ the quality."
+  },
+  {
+    "id": "interested__in__2c38c423",
+    "prompt": "interested __",
+    "answer": [
+      "in"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "интересуется",
+    "example_blank": "Interested __ art."
+  },
+  {
+    "id": "keen__on__03d3e68d",
+    "prompt": "keen __",
+    "answer": [
+      "on"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "увлечён",
+    "example_blank": "Keen __ hiking."
+  },
+  {
+    "id": "known_regarded__as__7aef78f5",
+    "prompt": "known __ (=regarded)",
+    "answer": [
+      "as"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "известен как (считается)",
+    "example_blank": "Known __ a genius."
+  },
+  {
+    "id": "pleased__with__c30785f8",
+    "prompt": "pleased __",
+    "answer": [
+      "with"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "доволен",
+    "example_blank": "Pleased __ the service."
+  },
+  {
+    "id": "rude__to__09704bbb",
+    "prompt": "rude __",
+    "answer": [
+      "to"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "груб с",
+    "example_blank": "Rude __ me."
+  },
+  {
+    "id": "typical__of__fe4d8f21",
+    "prompt": "typical __",
     "answer": [
       "of"
     ],
-    "group": "out_of_set",
-    "note": "forms “out of …”",
+    "group": "prepositions",
+    "note": "",
     "tags": [],
-    "ru": "вне / без",
-    "ru_note": "forms “out of …”",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "We’re out __ money."
+    "context_ru": "типично для",
+    "example_blank": "Typical __ him."
   },
   {
-    "id": "out_of_time",
-    "prompt": "out __ time",
+    "id": "knowledge__of__06971519",
+    "prompt": "knowledge __",
     "answer": [
       "of"
     ],
-    "group": "out_of_set",
-    "note": "forms “out of …”",
+    "group": "prepositions",
+    "note": "",
     "tags": [],
-    "ru": "вне / без",
-    "ru_note": "forms “out of …”",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "I’m out __ time."
+    "context_ru": "знание о",
+    "example_blank": "knowledge __ history"
   },
   {
-    "id": "out_of_date",
-    "prompt": "out __ date",
+    "id": "a_rise__in__6d4f8cbc",
+    "prompt": "a rise __",
+    "answer": [
+      "in"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "рост в",
+    "example_blank": "a rise __ prices"
+  },
+  {
+    "id": "feel_sympathy__for__9114af6e",
+    "prompt": "(feel) sympathy __",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "сочувствие к",
+    "example_blank": "sympathy __ victims"
+  },
+  {
+    "id": "a_talent__for__69684a35",
+    "prompt": "a talent __",
+    "answer": [
+      "for"
+    ],
+    "group": "prepositions",
+    "note": "",
+    "tags": [],
+    "context_ru": "талант к",
+    "example_blank": "a talent __ music"
+  },
+  {
+    "id": "a_taste_flavour_brief_experience__of__8698c130",
+    "prompt": "a taste __ (flavour / brief experience)",
     "answer": [
       "of"
     ],
-    "group": "out_of_set",
-    "note": "forms “out of …”",
-    "tags": [],
-    "ru": "вне / без",
-    "ru_note": "forms “out of …”",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "This passport is out __ date."
-  },
-  {
-    "id": "out_of_order",
-    "prompt": "out __ order",
-    "answer": [
-      "of"
-    ],
-    "group": "out_of_set",
-    "note": "forms “out of …”",
-    "tags": [],
-    "ru": "вне / без",
-    "ru_note": "forms “out of …”",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "The lift is out __ order."
-  },
-  {
-    "id": "out_of_breath",
-    "prompt": "out __ breath",
-    "answer": [
-      "of"
-    ],
-    "group": "out_of_set",
-    "note": "forms “out of …”",
-    "tags": [],
-    "ru": "вне / без",
-    "ru_note": "forms “out of …”",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "I’m out __ breath."
-  },
-  {
-    "id": "out_of_luck",
-    "prompt": "out __ luck",
-    "answer": [
-      "of"
-    ],
-    "group": "out_of_set",
-    "note": "forms “out of …”",
-    "tags": [],
-    "ru": "вне / без",
-    "ru_note": "forms “out of …”",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "You’re out __ luck."
-  },
-  {
-    "id": "out_of_practice",
-    "prompt": "out __ practice",
-    "answer": [
-      "of"
-    ],
-    "group": "out_of_set",
-    "note": "forms “out of …”",
-    "tags": [],
-    "ru": "вне / без",
-    "ru_note": "forms “out of …”",
-    "context_ru": "принадлежность/часть/осознание/качество",
-    "example_blank": "I’m out __ practice."
-  },
-  {
-    "id": "out_of_get_out_of",
-    "prompt": "get __ (doing sth)",
-    "answer": [
-      "out of"
-    ],
-    "group": "out_of_set",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "вляпаться/попасть (из/вне/без)",
-    "ru_note": "устойчивое «out of»: get out of doing / talk sb out of doing.",
-    "context_ru": "устойч. сочетание: out of = «из/вне/без»",
-    "example_blank": "He got __ paying."
+    "context_ru": "вкус / проба",
+    "example_blank": "a taste __ success"
   },
   {
-    "id": "out_of_talk_out_of",
-    "prompt": "talk sb __ doing sth",
+    "id": "a_taste_liking_preference__for__b54db670",
+    "prompt": "a taste __ (liking / preference)",
     "answer": [
-      "out of"
+      "for"
     ],
-    "group": "out_of_set",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "talk sb (из/вне/без)",
-    "ru_note": "устойчивое «out of»: get out of doing / talk sb out of doing.",
-    "context_ru": "устойч. сочетание: out of = «из/вне/без»",
-    "example_blank": "She talked me __ it."
+    "context_ru": "вкус/пристрастие",
+    "example_blank": "a taste __ jazz"
   },
   {
-    "id": "as_known_as",
-    "prompt": "known __ (a name/role)",
+    "id": "fill_sth_sth_else__with__835aca4c",
+    "prompt": "fill sth __ sth else",
     "answer": [
-      "as"
+      "with"
     ],
-    "group": "as_set",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "known (как/в качестве)",
-    "ru_note": "«as» = как/в качестве (роль/название).",
-    "context_ru": "название/роль: «известен как»",
-    "example_blank": "He is known __ Mike."
+    "context_ru": "заполнить чем‑то",
+    "example_blank": "Fill it __ water."
   },
   {
-    "id": "as_work_as",
-    "prompt": "work __ (a teacher)",
+    "id": "involve__in__f13533cc",
+    "prompt": "involve __",
     "answer": [
-      "as"
+      "in"
     ],
-    "group": "as_set",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "работать (как/в качестве)",
-    "ru_note": "«as» = как/в качестве (роль/название).",
-    "context_ru": "роль/название: as = «как/в качестве»",
-    "example_blank": "She works __ a teacher."
+    "context_ru": "вовлечь в",
+    "example_blank": "Involve him __ it."
   },
   {
-    "id": "as_serve_as",
-    "prompt": "serve __ (an example)",
+    "id": "know_sth__about__bf777ace",
+    "prompt": "know __ sth",
     "answer": [
-      "as"
+      "about"
     ],
-    "group": "as_set",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "служить/выступать (как/в качестве)",
-    "ru_note": "«as» = как/в качестве (роль/название).",
-    "context_ru": "роль/название: as = «как/в качестве»",
-    "example_blank": "This serves __ an example."
+    "context_ru": "знать о (в общих чертах)",
+    "example_blank": "Know __ the plan."
   },
   {
-    "id": "as_regard_as",
-    "prompt": "regard sb __ (a friend)",
+    "id": "sorry_sth_apology__for__ba859521",
+    "prompt": "sorry __ sth (apology)",
     "answer": [
-      "as"
+      "for"
     ],
-    "group": "as_set",
+    "group": "prepositions",
     "note": "",
     "tags": [],
-    "ru": "regard sb (как/в качестве)",
-    "ru_note": "«as» = как/в качестве (роль/название).",
-    "context_ru": "роль/название: as = «как/в качестве»",
-    "example_blank": "I regard her __ a friend."
-  },
-  {
-    "id": "as_think_of_as",
-    "prompt": "think of sb __ (a mentor)",
-    "answer": [
-      "as"
-    ],
-    "group": "as_set",
-    "note": "",
-    "tags": [],
-    "ru": "think of sb (как/в качестве)",
-    "ru_note": "«as» = как/в качестве (роль/название).",
-    "context_ru": "роль/название: as = «как/в качестве»",
-    "example_blank": "I think of him __ a mentor."
-  },
-  {
-    "id": "as_refer_to_as",
-    "prompt": "refer to sb __ (the lead)",
-    "answer": [
-      "as"
-    ],
-    "group": "as_set",
-    "note": "",
-    "tags": [],
-    "ru": "refer to sb (как/в качестве)",
-    "ru_note": "«as» = как/в качестве (роль/название).",
-    "context_ru": "роль/название: as = «как/в качестве»",
-    "example_blank": "People refer to her __ the lead."
-  },
-  {
-    "id": "as_treat_as",
-    "prompt": "treat sb __ (an equal)",
-    "answer": [
-      "as"
-    ],
-    "group": "as_set",
-    "note": "",
-    "tags": [],
-    "ru": "treat sb (как/в качестве)",
-    "ru_note": "«as» = как/в качестве (роль/название).",
-    "context_ru": "роль/название: as = «как/в качестве»",
-    "example_blank": "Treat me __ an equal."
-  },
-  {
-    "id": "as_qualify_as",
-    "prompt": "qualify __ (a nurse)",
-    "answer": [
-      "as"
-    ],
-    "group": "as_set",
-    "note": "",
-    "tags": [],
-    "ru": "квалифицироваться (как/в качестве)",
-    "ru_note": "«as» = как/в качестве (роль/название).",
-    "context_ru": "роль/название: as = «как/в качестве»",
-    "example_blank": "She qualified __ a nurse."
-  },
-  {
-    "id": "as_pass_as",
-    "prompt": "pass __ (a local)",
-    "answer": [
-      "as"
-    ],
-    "group": "as_set",
-    "note": "",
-    "tags": [],
-    "ru": "сойти за (как/в качестве)",
-    "ru_note": "«as» = как/в качестве (роль/название).",
-    "context_ru": "роль/название: as = «как/в качестве»",
-    "example_blank": "He can pass __ a local."
+    "context_ru": "извинение за (своё действие/ошибку)",
+    "example_blank": "I’m sorry __ the delay."
   }
 ]
