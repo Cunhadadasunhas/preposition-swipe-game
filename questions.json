@@ -1873,18 +1873,6 @@
     "example_blank": "Grateful __ your help."
   },
   {
-    "id": "an_advantage__over__fbd9ed5a",
-    "prompt": "an advantage __",
-    "answer": [
-      "over"
-    ],
-    "group": "prepositions",
-    "note": "",
-    "tags": [],
-    "context_ru": "преимущество над",
-    "example_blank": "an advantage __ competitors"
-  },
-  {
     "id": "a_demand__for__e7e971c9",
     "prompt": "a demand __",
     "answer": [
@@ -2843,6 +2831,66 @@
     "tags": [],
     "context_ru": "знать о (в общих чертах)",
     "example_blank": "Know __ the plan."
+  },
+  {
+    "id": "between_difference",
+    "prompt": "a difference __",
+    "answer": [
+      "between"
+    ],
+    "group": "nouns",
+    "note": "",
+    "tags": [],
+    "context_ru": "разница между двумя вещами/людьми",
+    "example_blank": "There’s a difference __ these two versions."
+  },
+  {
+    "id": "between_similarity",
+    "prompt": "a similarity __",
+    "answer": [
+      "between"
+    ],
+    "group": "nouns",
+    "note": "",
+    "tags": [],
+    "context_ru": "сходство между двумя вещами/явлениями",
+    "example_blank": "There’s a similarity __ the two designs."
+  },
+  {
+    "id": "between_distinction",
+    "prompt": "a distinction __",
+    "answer": [
+      "between"
+    ],
+    "group": "nouns",
+    "note": "",
+    "tags": [],
+    "context_ru": "различие/разграничение между двумя понятиями",
+    "example_blank": "The distinction __ the two terms is important."
+  },
+  {
+    "id": "between_connection",
+    "prompt": "a connection __",
+    "answer": [
+      "between"
+    ],
+    "group": "nouns",
+    "note": "",
+    "tags": [],
+    "context_ru": "связь/взаимосвязь между двумя вещами",
+    "example_blank": "There’s a connection __ stress and sleep."
+  },
+  {
+    "id": "between_relationship",
+    "prompt": "a relationship __",
+    "answer": [
+      "between"
+    ],
+    "group": "nouns",
+    "note": "",
+    "tags": [],
+    "context_ru": "отношения/зависимость между двумя вещами/людьми",
+    "example_blank": "The relationship __ price and quality isn’t always clear."
   },
   {
     "id": "sorry_sth_apology__for__ba859521",
